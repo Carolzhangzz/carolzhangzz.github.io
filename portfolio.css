@@ -155,7 +155,7 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: -8rem;
-    margin-left: 4rem;
+    margin-left: 10rem;
 }
 
 .location,
@@ -193,4 +193,71 @@ footer {
 footer a {
     color: #3498db;
     text-decoration: none;
+}
+
+/* 媒体查询：适应手机屏幕大小 */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content h1 {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .text-content p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #portfolio {
+        width: 100%;
+    }
+
+    .portfolio-item {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        align-items: center;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .location,
+    .affiliation {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
 }

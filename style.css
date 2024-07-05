@@ -34,10 +34,14 @@ nav {
   font-weight: bold;
 }
 
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
 }
 
 .main-content {
@@ -187,20 +191,23 @@ section h2 {
   margin: 0;
   font-size: 1em;
 }
-.news-item a{
+
+.news-item a {
   color: #ffd700;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .news-item a:hover {
   text-decoration: underline;
 }
+
 .contact-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: -8rem;
-  margin-left: 4rem;
+  margin-left: 10rem;
 }
 
 .location,
@@ -246,6 +253,7 @@ footer a {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 10px;
   }
 
   nav {
@@ -254,20 +262,16 @@ footer a {
       align-items: center;
   }
 
-  .container .logo {
-      display: none;
-  }
-
   .nav-links {
       flex-direction: column;
       gap: 10px;
-      align-items: center;
   }
 
   .main-content {
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: auto;
   }
 
   .main-content h1 {
@@ -277,19 +281,23 @@ footer a {
   .text-content {
       width: 100%;
       text-align: left;
+      padding: 0 10px;
   }
 
   .text-content p {
       text-align: left;
       font-size: 16px;
+      width: 100%;
   }
 
   section {
       width: 100%;
-      align-items: center;
       display: flex;
       flex-direction: column;
       text-align: left;
+      margin-top: 0;
+      margin-bottom: 2em;
+      padding: 0 10px;
   }
 
   section h2 {
@@ -297,9 +305,12 @@ footer a {
       text-align: left;
   }
 
-  #research-interests,
-  #publications,
-  #news,
+  #research-interests p,
+  #publications .publication-item p,
+  #news .news-item p {
+      width: 100%;
+  }
+
   .publications-list,
   .news-list {
       width: 100%;
@@ -312,19 +323,25 @@ footer a {
   }
 
   .contact-info {
-      align-items: flex-start;
+      align-items: center;
+      width: 100%;
+      text-align: center;
       margin-left: 0;
+      margin-bottom: 0;
   }
 
   .location,
   .affiliation {
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
   }
 
   .social-links {
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
   }
-}
 
+  footer {
+      text-align: center;
+  }
+}
