@@ -34,33 +34,33 @@ nav {
   font-weight: bold;
 }
 
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
 }
 
 .main-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80vh;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
 }
 
 .main-content h1 {
-  width: 30%;
-  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .text-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .text-content p {
-  width: 50%;
-  font-family: "Roboto Mono", "Courier New", monospace;
   font-size: 18px;
   line-height: 1.6;
   color: #cccccc;
@@ -81,29 +81,18 @@ nav {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-/* 在现有的 CSS 后添加以下样式 */
-
 section {
-  flex-wrap: nowrap;
-  margin-top: -10rem;
-  display: flex;
-  margin-bottom: 3em;
+  width: 100%;
+  margin-top: 40px;
 }
 
 section h2 {
-  width: 30%;
   color: #ffd700;
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
 
 #research-interests p {
-  width: 55%;
   color: #cccccc;
   line-height: 1.6;
   margin-bottom: 1em;
@@ -122,20 +111,12 @@ section h2 {
 }
 
 #publications {
-  display: flex;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-#publications h2 {
-  width: 30%;
-  color: rgb(93, 191, 157);
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-
 .publications-list {
-  width: 70%;
+  width: 100%;
 }
 
 .publication-item {
@@ -164,8 +145,6 @@ section h2 {
 }
 
 #news {
-  display: flex;
-  flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -187,20 +166,22 @@ section h2 {
   margin: 0;
   font-size: 1em;
 }
-.news-item a{
+
+.news-item a {
   color: #ffd700;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .news-item a:hover {
   text-decoration: underline;
 }
+
 .contact-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: -8rem;
-  margin-left: 4rem;
+  margin-bottom: 2rem;
 }
 
 .location,
@@ -238,4 +219,84 @@ footer {
 footer a {
   color: #3498db;
   text-decoration: none;
+}
+
+/* 媒体查询：适应手机屏幕大小 */
+@media (max-width: 768px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .container .logo {
+      display: none;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  }
+
+  .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .main-content h1 {
+      text-align: center;
+      font-size: 36px;
+  }
+
+  .text-content p {
+      text-align: center;
+      font-size: 16px;
+  }
+
+  section {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+  }
+
+  section h2 {
+      text-align: center;
+  }
+
+  #research-interests,
+  #publications,
+  #news,
+  .publications-list,
+  .news-list {
+      width: 100%;
+      align-items: center;
+  }
+
+  .publication-item,
+  .news-item {
+      text-align: center;
+  }
+
+  .contact-info {
+      align-items: center;
+  }
+
+  .location,
+  .affiliation {
+      justify-content: center;
+      width: 100%;
+  }
+
+  .social-links {
+      justify-content: center;
+      width: 100%;
+  }
 }
