@@ -46,36 +46,39 @@ nav {
   align-items: center;
   height: 80vh;
 }
+
 .main-content h1 {
   width: 30%;
   font-family: "Roboto Mono", "Courier New", monospace;
 }
+
 .text-content {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 .text-content p {
   width: 50%;
   font-family: "Roboto Mono", "Courier New", monospace;
   font-size: 18px;
   line-height: 1.6;
   color: #cccccc;
-  letter-spacing: 0.05em; /* 稍微增加字母间距 */
-  font-weight: 300; /* 使用较细的字重 */
+  letter-spacing: 0.05em;
+  font-weight: 300;
 }
 
 .text-content a {
-  color: white; /* 链接文字颜色为白色 */
-  text-decoration: underline; /* 添加下划线 */
-  transition: all 0.3s ease; /* 添加过渡效果 */
-  padding: 2px 4px; /* 添加一些内边距,为hover效果留出空间 */
+  color: white;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  padding: 2px 4px;
 }
 
 .text-content a:hover {
-  color: black; /* 鼠标悬停时文字变黑 */
-  background-color: white; /* 鼠标悬停时背景变白 */
-  text-decoration: none; /* 移除下划线 */
+  color: black;
+  background-color: white;
+  text-decoration: none;
 }
 
 h1 {
@@ -91,6 +94,7 @@ section {
   display: flex;
   margin-bottom: 3em;
 }
+
 section h2 {
   width: 30%;
   color: #ffd700;
@@ -106,15 +110,15 @@ section h2 {
 }
 
 #research-interests a {
-  color: #ffffff; /* 白色链接 */
+  color: #ffffff;
   text-decoration: underline;
   transition: all 0.3s ease;
 }
 
 #research-interests a:hover {
   color: black;
-  background-color: white; /* 鼠标悬停时背景变白 */
-  text-decoration: none; /* 移除下划线 */
+  background-color: white;
+  text-decoration: none;
 }
 
 #publications {
@@ -159,7 +163,35 @@ section h2 {
   text-decoration: underline;
 }
 
+#news {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
+#news h2 {
+  color: rgb(199, 100, 238);
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.news-item p {
+  color: white;
+  margin: 0;
+  font-size: 1em;
+}
+.news-item a{
+  color: #ffd700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 .contact-info {
   display: flex;
   flex-direction: column;
