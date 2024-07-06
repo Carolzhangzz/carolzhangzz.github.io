@@ -85,6 +85,7 @@ nav {
   color: black;
   background-color: white;
   text-decoration: none;
+  line-height: 1.6;
 }
 
 h1 {
@@ -110,10 +111,9 @@ section h2 {
 }
 
 #research-interests p {
-  font-weight: bolder;
   font-size: large;
   width: 55%;
-  color: #cccccc;
+  color: white;
   line-height: 1.6;
   margin-bottom: 1em;
 }
@@ -172,6 +172,77 @@ section h2 {
   text-decoration: underline;
 }
 
+#portfolio {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  flex-direction: column;
+}
+
+#portfolio h2 {
+  width: 30%;
+  color: rgb(239, 132, 83);
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #001a30;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.portfolio-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.portfolio-item h3 {
+  color: #ffffff;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.portfolio-item p {
+  color: #cccccc;
+  margin-bottom: 0.5em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: #ffe657;
+  color: #001220;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.875em;
+}
+
+.portfolio-links .button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffa200;
+  color: #001220;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.portfolio-links .button:hover {
+  background-color: white;
+  color: black;
+}
 #news {
   display: flex;
   flex-direction: column;
