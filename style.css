@@ -24,9 +24,9 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 30px 0;
+  justify-content: space-between;
 }
 
 .logo {
@@ -37,11 +37,78 @@ nav {
 .nav-links {
   display: flex;
   gap: 20px;
+  margin-right: auto; /* 将导航链接移到右侧 */
+  transition: all 0.3s ease; /* 添加平滑过渡效果 */
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffd700; /* 高亮颜色 */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-links a:hover {
+  color: black; /* 悬停时的文字颜色 */
+  background-color: white;
+}
+
+.nav-links{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: -8rem;
+  margin-left: 10rem;
+
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: -8rem;
+}
+
+.location,
+.affiliation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.location i,
+.affiliation i {
+  margin-right: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffd700;
 }
 
 .main-content {
@@ -277,40 +344,6 @@ section h2 {
   text-decoration: underline;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: -8rem;
-  margin-left: 10rem;
-}
-
-.location,
-.affiliation {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.location i,
-.affiliation i {
-  margin-right: 0.5rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-links a {
-  color: white;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #ffd700;
-}
 
 footer {
   text-align: center;
@@ -322,6 +355,7 @@ footer a {
   text-decoration: none;
 }
 
+/* 媒体查询：适应手机屏幕大小 */
 /* 媒体查询：适应手机屏幕大小 */
 @media (max-width: 768px) {
   .container {
@@ -335,11 +369,38 @@ footer a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .logo {
+    margin-bottom: 15px;
   }
 
   .nav-links {
     flex-direction: column;
     gap: 10px;
+    margin: 0;
+    align-items: center;
+  }
+
+  .contact-info {
+    order: -1;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .location,
+  .affiliation {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .social-links {
+    justify-content: center;
+    width: 100%;
   }
 
   .main-content {
@@ -347,53 +408,48 @@ footer a {
     flex-direction: column;
     align-items: center;
     height: auto;
+    margin-top: 20px;
   }
 
   .main-content h1 {
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    font-size: 20px;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
   }
 
   .text-content {
     width: 100%;
+    flex-direction: column;
+  }
+
+  .text-content p {
+    width: 100%;
+    font-size: 16px;
     text-align: left;
     padding: 0 10px;
   }
 
-  .text-content p {
-    font-weight: bolder;
-    text-align: left;
-    font-size: 16px;
-    width: 100%;
-  }
-
   section {
     width: 100%;
-    display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 0;
-    margin-bottom: 2em;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 0 10px;
   }
 
   section h2 {
     width: 100%;
     text-align: left;
+    margin-bottom: 15px;
   }
 
   #research-interests p,
-  #publications .publication-item p,
-  #news .news-item p {
+  #publications .publications-list,
+  #portfolio .portfolio-item,
+  #news .news-list {
     width: 100%;
-  }
-
-  .publications-list,
-  .news-list {
-    width: 100%;
-    align-items: flex-start;
   }
 
   .publication-item,
@@ -401,28 +457,23 @@ footer a {
     text-align: left;
   }
 
-  .contact-info {
-    align-items: center;
+  .portfolio-item {
+    padding: 15px;
+  }
+
+  .portfolio-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-links .button {
     width: 100%;
     text-align: center;
-    margin-left: 20px;
-    margin-bottom: 0;
-  }
-
-  .location,
-  .affiliation {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
   }
 
   footer {
     text-align: center;
+    padding: 15px 0;
   }
 }
