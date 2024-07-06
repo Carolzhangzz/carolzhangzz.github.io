@@ -26,7 +26,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .logo {
@@ -197,7 +197,6 @@ section h2 {
 }
 .portfolio-item img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -406,7 +405,7 @@ footer a {
     align-items: center;
     width: 100%;
     text-align: center;
-    margin-left: 0;
+    margin-left: 20px;
     margin-bottom: 0;
   }
 
@@ -417,6 +416,8 @@ footer a {
   }
 
   .social-links {
+    display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
   }
