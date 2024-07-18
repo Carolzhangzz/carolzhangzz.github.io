@@ -47,7 +47,7 @@ nav {
 }
 
 .nav-links a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 3px;
@@ -69,13 +69,12 @@ nav {
   background-color: white;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   margin-bottom: -8rem;
   margin-left: 10rem;
-
 }
 .contact-info {
   display: flex;
@@ -123,16 +122,30 @@ nav {
   width: 30%;
   font-family: "Roboto Mono", "Courier New", monospace;
 }
+.profile-photo {
+  width: 200px; /* 调整为所需的宽度 */
+  height: auto; /* 保持纵横比 */
+  border-radius: 50%; /* 如果你想要圆形照片 */
+  margin-bottom: 20px; /* 根据需要调整间距 */
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 150px; /* 在手机屏幕上稍微缩小照片 */
+  }
+}
 
 .text-content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
 }
 
 .text-content p {
+  width: 100%;
+  max-width: 900px; /* 或者你认为合适的宽度 */
   font-weight: bolder;
-  width: 50%;
+  /* width: 50%; */
   font-family: "Roboto Mono", "Courier New", monospace;
   font-size: 18px;
   line-height: 1.6;
@@ -172,7 +185,7 @@ section {
 section h2 {
   width: 30%;
   font-weight: bolder;
-  color: #ffd700;
+  color: rgb(250, 250, 202) ;
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
@@ -185,7 +198,11 @@ section h2 {
   margin-bottom: 1em;
 }
 
+#research-interests h2 {
+  /* margin-top: 20rem; */
+}
 #research-interests a {
+  margin-top: 20rem;
   color: #ffffff;
   text-decoration: underline;
   transition: all 0.3s ease;
@@ -199,19 +216,34 @@ section h2 {
 
 #publications {
   display: flex;
+  flex-direction: column;
+  flex-direction: row;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 #publications h2 {
   width: 30%;
-  color: rgb(93, 191, 157);
+ color: #9cd7ff;
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
 
 .publications-list {
   width: 70%;
+}
+.publications-list-2 {
+  width: 70%;
+  margin-left: 22.4rem;
+}
+.publications-list-2 a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.publications-list-2 a:hover {
+  text-decoration: underline;
 }
 
 .publication-item {
@@ -230,7 +262,7 @@ section h2 {
 }
 
 .publications-list a {
-  color: #ffd700;
+  color: #ffffff;
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -239,6 +271,43 @@ section h2 {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  #publications {
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #publications h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .publications-list,
+  .publications-list-2 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .publication-item {
+    margin-bottom: 2rem;
+  }
+
+  .publication-item h3 {
+    font-size: 1em;
+  }
+
+  .publication-item p {
+    font-size: 0.9em;
+  }
+  .container {
+    padding: 10px;
+  }
+
+  section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 #portfolio {
   display: flex;
   margin-top: 2rem;
@@ -343,7 +412,6 @@ section h2 {
 .news-item a:hover {
   text-decoration: underline;
 }
-
 
 footer {
   text-align: center;
