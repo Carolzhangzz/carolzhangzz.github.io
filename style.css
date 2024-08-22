@@ -237,7 +237,7 @@ section h2 {
   margin-left: 22.4rem;
 }
 .publications-list-2 a {
-  color: rgb(249, 216, 73);
+  color: rgb(169, 213, 251);
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -262,7 +262,7 @@ section h2 {
 }
 
 .publications-list a {
-  color: rgb(249, 216, 73);
+  color: rgb(169, 213, 251);
   text-decoration: none;
   margin-right: 1rem;
 }
@@ -357,7 +357,7 @@ section h2 {
 }
 
 .tag {
-  background-color: #ffe657;
+  background-color: rgb(169, 213, 251);
   color: #001220;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -367,7 +367,7 @@ section h2 {
 .portfolio-links .button {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #ffa200;
+  background-color: #f8f7f2;
   color: #001220;
   text-decoration: none;
   margin-right: 1rem;
