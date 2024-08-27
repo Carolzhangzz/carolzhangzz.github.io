@@ -28,8 +28,64 @@ a {
   transition: var(--transition);
 }
 
+
+/* 全局链接样式 */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* 悬停效果 */
 a:hover {
-  color: #ffffff;
+  color: #aef3ff;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(174, 243, 255, 0.5);
+}
+
+/* 添加下划线动画 */
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #aef3ff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* 为不同类型的链接自定义效果 */
+.nav-links a:hover {
+  color: #aef3ff;
+  text-shadow: 0 0 10px rgba(174, 243, 255, 0.7);
+}
+
+.button:hover {
+  background-color: #aef3ff;
+  color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(174, 243, 255, 0.5);
+}
+
+.social-links a:hover {
+  color: #aef3ff;
+  transform: translateY(-3px) rotate(8deg);
+}
+
+@media (max-width: 768px) {
+  a:hover {
+    transform: scale(1.02); /* 在移动设备上减小缩放效果 */
+  }
 }
 
 /* Navigation */
@@ -104,18 +160,58 @@ p {
   margin: 0 auto 20px;
 }
 
+.text-content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
 .profile-photo {
+  margin-right: 150px;
   width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
- 
-  transition: var(--transition);
+  transition: all 0.4s ease;
+  border: 4px solid #8dbafd;
+  box-shadow: 0 0 20px rgba(0, 86, 179, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.profile-photo::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(45deg, var(--accent-color), #4a90e2);
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .profile-photo:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 86, 179, 0.25);
+}
+
+.profile-photo:hover::after {
+  opacity: 0.7;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    margin: 0 auto 30px;
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* Sections */
@@ -295,6 +391,17 @@ section {
 @media (max-width: 768px) {
   .news-item p {
     font-size: 14px; /* 在小屏幕上稍微减小字体大小 */
+  }
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .profile-photo {
+    /* 定位屏幕中央 */
+    margin: 0 auto 30px;
+
+    margin-bottom: 20px;
   }
 }
 
