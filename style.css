@@ -1,9 +1,9 @@
 :root {
-  --bg-color: #0a192f;
-  --text-color: #e6f1ff;
-  --accent-color: #38ffe5;
-  --secondary-color: #e9eeff;
-  --tertiary-color: #112240;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #0056b3;
+  --secondary-color: #666666;
+  --tertiary-color: #f8f9fa;
   --transition: all 0.3s ease;
 }
 
@@ -110,7 +110,7 @@ p {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
-  border: 2px solid var(--accent-color);
+ 
   transition: var(--transition);
 }
 
