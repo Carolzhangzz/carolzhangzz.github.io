@@ -102,17 +102,17 @@ h2 {
 }
 
 .btn-primary {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: #f5d2d1;
+  color: var(--primary-color);
 }
 
 .btn-secondary {
-  background-color: var(--tertiary-color);
-  color: white;
+  background-color: #f5d2d1;
+  color: var(--primary-color);
 }
 
 .btn-tertiary {
-  background-color: var(--light-bg-color);
+  background-color: #adcdfb;
   color: var(--primary-color);
 }
 
