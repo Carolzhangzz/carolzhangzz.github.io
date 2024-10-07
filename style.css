@@ -191,6 +191,7 @@ h2 {
 }
 
 /* Publications Section */
+/* Publications Section */
 #publications {
   margin-bottom: 3rem;
   background-color: #fff5e6;
@@ -215,29 +216,34 @@ h2 {
 
 .publication-content {
   display: flex;
-  gap: 2rem;
+  gap: 1rem; /* 减小了gap */
+  align-items: center; /* 添加这行以垂直居中对齐内容 */
 }
 
 .publication-image {
-  flex: 0 0 40%;
+  flex: 0 0 30%; /* 减小了图片所占的比例 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .publication-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s;
 }
 
 .publication-image img:hover {
-  transform: scale(1.1);
-  transition: transform 0.5s;
+  transform: scale(1.02);
 }
 
 .publication-info {
   flex: 1;
 }
+/* 其余的CSS保持不变 */
 
 .publication-item h3 {
   font-size: 1.4rem;
