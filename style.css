@@ -433,9 +433,12 @@ footer {
   }
 
   .cta-buttons {
-    flex-direction: column;
-    align-items: stretch;
+    /* //不要全部展开 */
+    /* 保持固定宽度 */
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
 
   .btn {
     margin-bottom: 0.5rem;
