@@ -6,6 +6,7 @@
   --text-color: #2d3748;
   --light-bg-color: #f7fafc;
   --border-color: #e2e8f0;
+  --highlight-color: #ffd700;
 }
 
 * {
@@ -15,7 +16,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -30,24 +31,44 @@ main {
 a {
   color: var(--tertiary-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--secondary-color);
 }
 
-h1, h2 {
+h1, h2, h3 {
+  font-family: 'Shadows Into Light', cursive;
   color: var(--primary-color);
+  letter-spacing: 1px;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 10px;
+  background-color: var(--highlight-color);
+  z-index: -1;
+  opacity: 0.5;
+  transform: skew(-5deg);
 }
 
 /* About Section */
@@ -75,6 +96,12 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
 }
 
 .social-links {
@@ -85,6 +112,11 @@ h2 {
   font-size: 1.5rem;
   margin: 0 0.5rem;
   color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
 }
 
 .cta-buttons {
@@ -94,44 +126,79 @@ h2 {
 }
 
 .btn {
+  font-family: 'Poppins', sans-serif;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 25px;
   font-weight: bold;
   text-align: center;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn-primary {
-  background-color: #f8d8b0;
+  background-color: #fff9da;
   color: var(--primary-color);
 }
 
 .btn-secondary {
-  background-color:#f8d8b0;
+  background-color: #ffd7eb;
   color: var(--primary-color);
 }
 
 .btn-tertiary {
-  background-color: #adcdfb;
+  background-color: #f3ffff;
   color: var(--primary-color);
 }
+
+/* 通用动画 */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* News Section */
 #news {
   margin-bottom: 3rem;
+  background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+#news h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
 }
 
 .news-container {
-  background-color: #f0f8ff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .news-item {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: baseline;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .news-item:last-child {
@@ -141,10 +208,11 @@ h2 {
 }
 
 .date {
-  flex: 0 0 80px;
-  font-weight: bold;
-  color: #666;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.9em;
+  font-weight: 600;
+  color: #4a5568;
+  flex: 0 0 80px;
 }
 
 .news-content {
@@ -152,19 +220,21 @@ h2 {
 }
 
 .news-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95em;
   margin: 0;
   line-height: 1.4;
 }
 
 .news-content a {
-  color: #1a73e8;
+  color: #3182ce;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .news-content a:hover {
-  color: #135cbc;
+  color: #2c5282;
   text-decoration: underline;
 }
 
@@ -175,15 +245,17 @@ h2 {
   margin-top: 15px;
   background-color: #1a73e8;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   font-weight: bold;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .show-more:hover {
   background-color: #135cbc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .hidden {
@@ -194,9 +266,18 @@ h2 {
 /* Publications Section */
 #publications {
   margin-bottom: 3rem;
-  background-color: #fff5e6;
+  background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
+  border-radius: 15px;
   padding: 2rem;
-  border-radius: 10px;
+}
+
+#publications h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
 }
 
 .publication-container {
@@ -207,21 +288,27 @@ h2 {
 }
 
 .publication-item {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .publication-content {
   display: flex;
-  gap: 1rem; /* 减小了gap */
-  align-items: center; /* 添加这行以垂直居中对齐内容 */
+  gap: 1rem;
+  align-items: center;
 }
 
 .publication-image {
-  flex: 0 0 30%; /* 减小了图片所占的比例 */
+  flex: 0 0 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,26 +319,42 @@ h2 {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.5s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* .publication-image img:hover {
-  transform: scale(1.02);
-} */
+.publication-image img:hover {
+  transform: scale(1.05);
+}
 
 .publication-info {
   flex: 1;
 }
-/* 其余的CSS保持不变 */
 
 .publication-item h3 {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #1a202c;
+  color: #2d3748;
+  position: relative;
+  display: inline-block;
+}
+
+.publication-item h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 215, 0, 0.5);
+  z-index: -1;
+  transform: skew(-3deg);
 }
 
 .authors, .venue {
+  font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   color: #4a5568;
@@ -265,18 +368,22 @@ h2 {
 }
 
 .btn-sm {
+  font-family: 'Poppins', sans-serif;
   padding: 0.25rem 0.5rem;
   font-size: 0.8rem;
-  background-color: #fed7aa;
-  color: #9c4221;
+  font-weight: 500;
+  background-color: #edf2f7;
+  color: #3182ce;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn-sm:hover {
-  background-color: #fbd38d;
+  background-color: #e2e8f0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .star-count {
@@ -293,17 +400,55 @@ h2 {
 .award {
   font-size: 0.8rem;
   color: #d69e2e;
+  font-weight: bold;
 }
 
 .bibtex-content {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
   background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 5px;
   padding: 1rem;
   margin-top: 1rem;
-  font-family: monospace;
-  font-size: 0.9rem;
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow-x: auto;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.bibtex-toggle {
+  cursor: pointer;
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.bibtex-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .publication-content {
+    flex-direction: column;
+  }
+
+  .publication-image {
+    margin-bottom: 1rem;
+  }
+
+  .publication-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .authors, .venue {
+    font-size: 0.85rem;
+  }
+
+  .btn-sm {
+    font-size: 0.75rem;
+  }
 }
 
 .see-all-link {
@@ -312,6 +457,11 @@ h2 {
   margin-top: 1rem;
   color: #4a5568;
   text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.see-all-link:hover {
+  color: #2d3748;
 }
 
 /* Projects Section */
@@ -330,12 +480,22 @@ h2 {
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
 }
 
 .project-item img {
   width: 100%;
   height: 150px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
 }
 
 .project-content {
@@ -367,6 +527,18 @@ footer {
   font-size: 1.5rem;
   margin: 0 0.5rem;
   color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 /* Responsive Design */
@@ -395,11 +567,11 @@ footer {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .btn {

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.textContent = 'Hide BibTeX';
             } else {
                 bibtexContent.style.display = 'none';
-                this.textContent = 'BibTeX';
+                this.textContent = 'Show BibTeX';
             }
         });
     });
