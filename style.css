@@ -162,43 +162,61 @@ h2::after {
   100% {background-position: 0% 50%;}
 }
 
-/* News Section */
-#news {
+/* 通用样式 */
+#news, #publications {
   margin-bottom: 3rem;
+  border-radius: 15px;
+  /* padding: 2rem; */
+}
+
+/* 渐变背景选项 */
+.gradient-bg {
   background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
   background-size: 200% 200%;
   animation: gradientBG 15s ease infinite;
-  border-radius: 15px;
-  padding: 2rem;
 }
 
-#news h2 {
-  font-family: 'Poppins', sans-serif;
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* 纯色背景选项 */
+.solid-bg {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 标题样式 */
+#news h2, #publications h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2rem;
   font-weight: 600;
-  color: #2d3748;
+  color: #333;
   margin-bottom: 1.5rem;
 }
 
+/* 可选的下划线样式 */
+.underline-title {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+/* News Section */
 .news-container {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .news-item {
-  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: baseline;
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #e0e0e0;
   transition: all 0.3s ease;
-}
-
-.news-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .news-item:last-child {
@@ -208,78 +226,56 @@ h2::after {
 }
 
 .date {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #4a5568;
+  color: #666;
   flex: 0 0 80px;
+  margin-right: 1rem;
 }
 
 .news-content {
   flex: 1;
-}
-
-.news-content p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95em;
-  margin: 0;
-  line-height: 1.4;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
 }
 
 .news-content a {
-  color: #3182ce;
+  color: #0066cc;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .news-content a:hover {
-  color: #2c5282;
+  color: #004499;
   text-decoration: underline;
 }
 
+/* Show More Button */
 .show-more {
   display: block;
   width: 100%;
-  padding: 10px;
-  margin-top: 15px;
-  background-color: #1a73e8;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  background-color: #f0f0f0;
   border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  color: white;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .show-more:hover {
-  background-color: #135cbc;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.hidden {
-  display: none;
+  background-color: #e0e0e0;
 }
 
 /* Publications Section */
-/* Publications Section */
-#publications {
-  margin-bottom: 3rem;
-  background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-  background-size: 200% 200%;
-  animation: gradientBG 15s ease infinite;
-  border-radius: 15px;
-  padding: 2rem;
-}
-
-#publications h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #2d3748;
-  margin-bottom: 1.5rem;
-}
-
 .publication-container {
   display: flex;
   flex-direction: column;
@@ -291,35 +287,29 @@ h2::after {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
 .publication-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .publication-content {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .publication-image {
-  flex: 0 0 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 0 0 200px;
 }
 
 .publication-image img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -332,32 +322,18 @@ h2::after {
 }
 
 .publication-item h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
+  color: #333;
   margin-bottom: 0.5rem;
-  color: #2d3748;
-  position: relative;
-  display: inline-block;
-}
-
-.publication-item h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 6px;
-  background-color: rgba(255, 215, 0, 0.5);
-  z-index: -1;
-  transform: skew(-3deg);
 }
 
 .authors, .venue {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 0.9rem;
+  color: #666;
   margin-bottom: 0.5rem;
-  color: #4a5568;
 }
 
 .publication-links {
@@ -368,22 +344,20 @@ h2::after {
 }
 
 .btn-sm {
-  font-family: 'Poppins', sans-serif;
-  padding: 0.25rem 0.5rem;
+  padding: 0.3rem 0.8rem;
   font-size: 0.8rem;
-  font-weight: 500;
-  background-color: #edf2f7;
-  color: #3182ce;
+  color: #46a6ff;
+  background-color: #eef2f6;
   border: none;
-  border-radius: 20px;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .btn-sm:hover {
-  background-color: #e2e8f0;
+  background-color: #cde3fe;
   transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .star-count {
@@ -404,13 +378,13 @@ h2::after {
 }
 
 .bibtex-content {
-  font-family: 'Courier New', monospace;
-  font-size: 0.85rem;
   background-color: #f7fafc;
   border: 1px solid #e2e8f0;
   border-radius: 5px;
   padding: 1rem;
   margin-top: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-x: auto;
@@ -418,37 +392,25 @@ h2::after {
   overflow-y: auto;
 }
 
-.bibtex-toggle {
-  cursor: pointer;
-  color: #3182ce;
-  text-decoration: none;
-}
-
-.bibtex-toggle:hover {
-  text-decoration: underline;
-}
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
   .publication-content {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .publication-image {
-    margin-bottom: 1rem;
-  }
-
-  .publication-item h3 {
-    font-size: 1.2rem;
-  }
-
-  .authors, .venue {
-    font-size: 0.85rem;
+      flex: 0 0 auto;
+      margin-bottom: 1rem;
   }
 
   .btn-sm {
-    font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 .see-all-link {
