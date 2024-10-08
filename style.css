@@ -128,7 +128,7 @@ h2::after {
 .btn {
   font-family: 'Poppins', sans-serif;
   padding: 0.5rem 1rem;
-  border-radius: 25px;
+  border-radius: 10px;
   font-weight: bold;
   text-align: center;
   transition: all 0.3s ease;
@@ -146,12 +146,12 @@ h2::after {
 }
 
 .btn-secondary {
-  background-color: #ffd7eb;
+  background-color: #fff9da;
   color: var(--primary-color);
 }
 
 .btn-tertiary {
-  background-color: #f3ffff;
+  background-color: #b3ccf7;
   color: var(--primary-color);
 }
 
