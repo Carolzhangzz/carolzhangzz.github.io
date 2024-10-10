@@ -75,6 +75,17 @@ p {
     margin-bottom: 10px;
 }
 
+#awards a{
+    color:black;
+    text-decoration: underline;
+}
+
+#awards a:hover{
+    color: #ff69b4;
+    text-decoration: none;
+}
+
+
 .award {
     color: #ff69b4;
     font-weight: bold;
