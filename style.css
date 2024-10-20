@@ -7,6 +7,10 @@
   --light-bg-color: #ffffff;     /* 白色，用于卡片和容器背景 */
   --border-color: #dee2e6;       /* 浅灰色边框 */
   --highlight-color:#caca37;    /* 深红色，用于重要强调 */
+
+   /* 添加新的字体变量 */
+   --heading-font: 'Roboto', sans-serif;
+   --body-font: 'Open Sans', sans-serif;
 }
 
 .fancy-quote {
@@ -28,13 +32,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -52,36 +49,39 @@ a:hover {
   color: var(--secondary-color);
 }
 
+body {
+  font-family: var(--body-font);
+  font-size: 14px; /* 减小基本字体大小 */
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
 h1, h2, h3 {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: var(--heading-font);
   color: var(--primary-color);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px; /* 减小字母间距 */
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* 减小h1字体大小 */
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-shadow: none; /* 移除文字阴影，使其更加严肃 */
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  display: inline-block;
+  font-size: 2rem; /* 减小h2字体大小 */
+  margin-bottom: 1.2rem;
 }
 
+h3 {
+  font-size: 1.5rem; /* 添加h3样式 */
+  margin-bottom: 1rem;
+}
+
+/* 移除h2的装饰效果，使其更加严肃 */
 h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 10px;
-  background-color: var(--highlight-color);
-  z-index: -1;
-  opacity: 0.5;
-  transform: skew(-5deg);
+  content: none;
 }
 
 /* About Section */
