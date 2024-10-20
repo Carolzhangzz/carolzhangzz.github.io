@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #1a202c;
-  --secondary-color: #e53e3e;
-  --tertiary-color: #4299e1;
-  --background-color: #ffffff;
-  --text-color: #2d3748;
-  --light-bg-color: #f7fafc;
-  --border-color: #e2e8f0;
-  --highlight-color: #ffd700;
+  --primary-color: #2c3e50;      /* 深蓝灰色，给人专业感 */
+  --secondary-color: #34495e;    /* 稍浅的蓝灰色，用于次要元素 */
+  --tertiary-color: #3498db;     /* 明亮的蓝色，用于强调和链接 */
+  --background-color: #ffffff;   /* 非常浅的灰色背景 */
+  --text-color: #333333;         /* 深灰色文本，易读性好 */
+  --light-bg-color: #ffffff;     /* 白色，用于卡片和容器背景 */
+  --border-color: #dee2e6;       /* 浅灰色边框 */
+  --highlight-color:#caca37;    /* 深红色，用于重要强调 */
 }
 
 .fancy-quote {
@@ -154,18 +154,18 @@ h2::after {
 }
 
 .btn-primary {
-  background-color: #fff9da;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--light-bg-color);
 }
 
 .btn-secondary {
-  background-color: #fff9da;
-  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--light-bg-color);
 }
 
 .btn-tertiary {
-  background-color: #b3ccf7;
-  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  color: var(--light-bg-color);
 }
 
 /* 通用动画 */
@@ -184,7 +184,7 @@ h2::after {
 
 /* 渐变背景选项 */
 .gradient-bg {
-  background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  background: linear-gradient(45deg, #f1f3f5 0%, #e9ecef 99%, #e9ecef 100%);
   background-size: 200% 200%;
   animation: gradientBG 15s ease infinite;
 }
@@ -297,7 +297,8 @@ h2::after {
 }
 
 .publication-item {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--light-bg-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   overflow: hidden;
   padding: 1.5rem;
@@ -357,10 +358,10 @@ h2::after {
 }
 
 .btn-sm {
+  background-color: #e8f4fd;
   padding: 0.3rem 0.8rem;
   font-size: 0.8rem;
-  color: #46a6ff;
-  background-color: #eef2f6;
+  color: var(--tertiary-color);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -369,7 +370,7 @@ h2::after {
 }
 
 .btn-sm:hover {
-  background-color: #cde3fe;
+  background-color: #d0e8f9;
   transform: translateY(-2px);
 }
 
@@ -490,7 +491,8 @@ h2::after {
 footer {
   text-align: center;
   padding: 2rem 0;
-  background-color: var(--light-bg-color);
+  background-color: var(--primary-color);
+  color: var(--light-bg-color);
   margin-top: 3rem;
 }
 
@@ -499,14 +501,14 @@ footer {
 }
 
 .footer-links a {
+  color: var(--light-bg-color);
   font-size: 1.5rem;
   margin: 0 0.5rem;
-  color: var(--primary-color);
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
 }
 
 /* Animations */
