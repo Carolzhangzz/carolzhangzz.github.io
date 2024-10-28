@@ -13,6 +13,14 @@
    --body-font: 'Open Sans', sans-serif;
 }
 
+
+.scaled-image {
+  width: 203px;
+  height: 124px;
+  object-fit: cover; /* Adjusts how the image scales within the specified dimensions */
+}
+
+
 .fancy-quote {
   font-family: 'Dancing Script', cursive;
   font-size: 1.2em;
