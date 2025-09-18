@@ -6,613 +6,384 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qinshi (Carol) Zhang</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0a0a0a;
-            --secondary-color: #404040;
-            --accent-color: #3b82f6;
-            --accent-hover: #2563eb;
-            --background: #fafafa;
-            --surface: #ffffff;
-            --border: #e5e7eb;
-            --text-primary: #111827;
-            --text-secondary: #6b7280;
-            --text-muted: #9ca3af;
-            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--background);
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 0;
-        }
-
-        .logo {
-            font-weight: 600;
-            font-size: 18px;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 15px;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 120px;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 80px;
-            align-items: start;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-text .subtitle {
-            font-size: 20px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            line-height: 1.5;
-        }
-
-        .hero-text p {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.7;
-        }
-
-        .hero-image {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid var(--border);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-
-        .social-links a {
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--accent-color);
-            color: white;
-            border-color: var(--accent-color);
-            transform: translateY(-1px);
-        }
-
-        /* Sections */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            margin-bottom: 48px;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            letter-spacing: -0.01em;
-        }
-
-        .section-subtitle {
-            color: var(--text-secondary);
-            font-size: 16px;
-        }
-
-        /* Publications */
-        .publications-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .publication-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 32px;
-            transition: var(--transition);
-        }
-
-        .publication-card:hover {
-            border-color: var(--accent-color);
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
-        }
-
-        .publication-content {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 32px;
-            align-items: start;
-        }
-
-        .publication-image img {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
-
-        .publication-info h3 {
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-
-        .publication-authors {
-            color: var(--text-secondary);
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .publication-venue {
-            color: var(--accent-color);
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 16px;
-        }
-
-        .publication-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: var(--transition);
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text-secondary);
-        }
-
-        .btn:hover {
-            background: var(--accent-color);
-            color: white;
-            border-color: var(--accent-color);
-        }
-
-        .btn i {
-            font-size: 12px;
-        }
-
-        /* News */
-        .news-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .news-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 24px;
-            padding: 24px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .news-item:last-child {
-            border-bottom: none;
-        }
-
-        .news-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .news-content {
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        .news-content a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .news-content a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--surface);
-            border-top: 1px solid var(--border);
-            padding: 48px 0;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .footer-links a {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            background: var(--background);
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            background: var(--accent-color);
-            color: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 48px;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 36px;
-            }
-
-            .publication-content {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .news-item {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-
-            .nav-links {
-                gap: 20px;
-            }
-
-            section {
-                padding: 48px 0;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .publication-card, .news-item {
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        /* Special styling for author names */
-        .publication-authors strong {
-            color: var(--text-primary);
-        }
-
-        /* Enhanced hover effects */
-        .publication-card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .publication-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .publication-card:hover::before {
-            left: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">Carol Zhang</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="./cv.html">CV</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
-        <section id="about" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Qinshi (Carol) Zhang</h1>
-                        <p class="subtitle">Computer Science Master's Student at UC San Diego</p>
-                        
-                        <p>My research interests focus on <strong>AI for Social Good</strong> and <strong>Human-AI Interaction</strong>. I design and develop conversational agents leveraging NLP techniques to evaluate and intervene user's environmental attitudes and behaviors.</p>
-                        
-                        <p>I work with <a href="https://spdow.ucsd.edu/">Prof. Steven Dow</a> at <a href="https://designlab.ucsd.edu/">UCSD Design Lab</a> and have collaborated with <a href="https://www.scm.cityu.edu.hk/people/ray-lc">Dr. Ray LC</a> at HK CityU, resulting in publications at CHI'24 and CHI'25.</p>
+        <section id="about">
+            <h1>Qinshi (Carol) Zhang</h1>
+            <div class="profile-content">
+                <div class="profile-text">
+                    </br>
+
+                    <p>Hi, I'm Carol Zhang. I'm currently a Computer Science Master student at the University
+                        of California, San Diego (UCSD).
+                    </p>
+                    </br>
+                    <p>My main research interests focus on <strong>AI for Social Good</strong> and <strong>Human-AI
+                            Interaction</strong>. </br> </br>
+                        I have designed and developed <strong> conversational agents </strong> leveraging
+                        NLP techniques to evaluate and intervene user's environmental attitudes and behaviors. </br>
+                        </br>
+
+                        I have worked with <a href="https://spdow.ucsd.edu/">Prof. Steven Dow</a> at <a
+                            href="https://designlab.ucsd.edu/">UCSD Design Lab</a>. I also have worked with <a
+                            href="https://www.scm.cityu.edu.hk/people/ray-lc">Dr.Ray LC</a> at HK CityU, resulting in a
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850">co-first
+                            authored paper</a> published at CHI'24 and a <a
+                            href="./PDF/GameSustainability_CHI_25__Clean_Version_.pdf">first authored paper</a> at
+                        CHI'25.
+                    <p>
+                        </br>
+
+                        <!-- <p>I obtained my Bachelor's degree in Computer Science and Technology from the School of Information
+                        Engineering at <a href="https://english.cjlu.edu.cn/">China Jiliang University (CJLU)</a> and
+                        another degree in Computer and Information Science at <a href="https://www.aut.ac.nz/">Auckland
+                            University of Technology (AUT)</a>, advised by Dr. Lin Xiang and Dr. Haijun Tao.</p> -->
+                </div>
+                <div class="profile-image">
+                    <img src="./images/carol_brown.jpeg" alt="Carol Zhang" class="profile-photo">
+                    <div class="social-links"
+                        style="font-size: 24px; display: flex; gap: 20px; justify-content: center;">
+                        <a href="./cv.html" title="CV"
+                            style="color: #333; text-decoration: none; display: flex; align-items: center;">
+                            <i class="fas fa-file-alt" style="margin-right: 4px;"></i>
+                            <span style="font-size:14px;"></span>
+                        </a>
+                        <a href="https://github.com/Carolzhangzz" title="Github"
+                            style="color: #333; text-decoration: none;">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao"
+                            title="Google Scholar" style="color: #4285f4; text-decoration: none;">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://twitter.com/Carol_Zhang1027" title="Twitter"
+                            style="color: #1DA1F2; text-decoration: none;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/qinshiz/" title="LinkedIn"
+                            style="color: #0077B5; text-decoration: none;">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                     </div>
-                    
-                    <div class="hero-image">
-                        <img src="./images/carol_brown.jpeg" alt="Carol Zhang" class="profile-photo">
-                        <div class="social-links">
-                            <a href="./cv.html" title="CV">
-                                <i class="fas fa-file-alt"></i>
-                            </a>
-                            <a href="https://github.com/Carolzhangzz" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao" title="Google Scholar">
-                                <i class="fas fa-graduation-cap"></i>
-                            </a>
-                            <a href="https://twitter.com/Carol_Zhang1027" title="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/qinshiz/" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
+                    <div class="cta-buttons">
+                        <!-- <a href="mailto:qiz065@ucsd.edu" class="btn btn-primary">Email</a>
+                        <a href="#" class="btn btn-secondary">Blog</a>
+                        <a href="./cv.html" class="btn btn-tertiary">CV</a> -->
                     </div>
                 </div>
             </div>
         </section>
-
         <section id="publications">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Featured Publications</h2>
-                    <p class="section-subtitle">* indicates equal contribution; † indicates corresponding author</p>
-                </div>
+            <h2>Featured Publications</h2>
 
-                <div class="publications-grid">
-                    <div class="publication-card">
-                        <div class="publication-content">
-                            <div class="publication-image">
-                                <img src="./images/Ecoecho.png" alt="EcoEcho Publication">
+            <p>Note: * indicates equal contribution; † indicates the corresponding author.</p>
+            <br>
+
+            <div class="publication-container">
+                <div class="publication-item">
+                    <div class="publication-content">
+                        <div class="publication-image">
+                            <img src="./images/Ecoecho.png" alt="EcoEcho Publication">
+                        </div>
+                        <div class="publication-info">
+                            <h3>Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show
+                                Consequences to Raise Sustainability Awareness</h3>
+                            <p class="authors"><strong>Qinshi Zhang</strong>, Ruoyu Wen, Zijian Ding, Latisha Besariani
+                                Hendra, Ray LC†</p>
+                            <p class="venue">CHI Conference on Human Factors in Computing Systems 2025</p>
+                            <div class="publication-links">
+                                <a href="https://ecoecho.duckdns.org/" class="btn btn-sm"><i class="fas fa-play"></i>
+                                    Demo</a>
+                                <a href="https://dl.acm.org/doi/10.1145/3706598.3713661" class="btn btn-sm"><i
+                                        class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="https://github.com/Carolzhangzz/Eco_Echo" class="btn btn-sm"><i
+                                        class="fas fa-code"></i> Code <span class="star-count">★</span></a>
                             </div>
-                            <div class="publication-info">
-                                <h3>Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise Sustainability Awareness</h3>
-                                <p class="publication-authors"><strong>Qinshi Zhang</strong>, Ruoyu Wen, Zijian Ding, Latisha Besariani Hendra, Ray LC†</p>
-                                <p class="publication-venue">CHI Conference on Human Factors in Computing Systems 2025</p>
-                                <div class="publication-links">
-                                    <a href="https://ecoecho.duckdns.org/" class="btn">
-                                        <i class="fas fa-play"></i> Demo
-                                    </a>
-                                    <a href="https://dl.acm.org/doi/10.1145/3706598.3713661" class="btn">
-                                        <i class="fas fa-file-pdf"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/Carolzhangzz/Eco_Echo" class="btn">
-                                        <i class="fas fa-code"></i> Code
-                                    </a>
-                                </div>
+                            <div class="publication-extra">
+                                <a href="#" class="btn btn-sm bibtex-toggle"><i class="fas fa-book"></i> BibTeX</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="publication-card">
-                        <div class="publication-content">
-                            <div class="publication-image">
-                                <img src="./images/Etergram.png" alt="Etergram Publication">
-                            </div>
-                            <div class="publication-info">
-                                <h3>Eternagram: Probing Player Attitudes in Alternate Climate Scenarios Through a ChatGPT-Driven Text Adventure</h3>
-                                <p class="publication-authors">Suifang Zhou*, Latisha Besariani Hendra*, <strong>Qinshi Zhang*</strong>, Jussi Holopainen, Ray LC†</p>
-                                <p class="publication-venue">CHI Conference on Human Factors in Computing Systems 2024</p>
-                                <div class="publication-links">
-                                    <a href="https://recfro.github.io/eternagram/" class="btn">
-                                        <i class="fas fa-project-diagram"></i> Project
-                                    </a>
-                                    <a href="https://www.youtube.com/watch?v=lvC-KcD2qRE&t=6s" class="btn">
-                                        <i class="fas fa-video"></i> Video
-                                    </a>
-                                    <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850" class="btn">
-                                        <i class="fas fa-file-pdf"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/Carolzhangzz/Eternagram_" class="btn">
-                                        <i class="fas fa-code"></i> Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="publication-card">
-                        <div class="publication-content">
-                            <div class="publication-image">
-                                <img src="./images/FD.png" alt="Frontend Diffusion Publication">
-                            </div>
-                            <div class="publication-info">
-                                <h3>Frontend Diffusion: Empowering Self-Representation of Researchers and Designers with Multi-agent System</h3>
-                                <p class="publication-authors">Zijian Ding, <strong>Qinshi Zhang</strong>, Mohan Chi, Ziyi Wang</p>
-                                <p class="publication-venue">IEEE Symposium on Visual Languages and Human-Centric Computing 2025</p>
-                                <div class="publication-links">
-                                    <a href="https://x.com/jasonzding/status/1814046922874724767" class="btn">
-                                        <i class="fas fa-video"></i> Video
-                                    </a>
-                                    <a href="./PDF/VLHCC25_FD.pdf" class="btn">
-                                        <i class="fas fa-file-pdf"></i> PDF
-                                    </a>
-                                    <a href="https://github.com/Carolzhangzz/frontendiffusion" class="btn">
-                                        <i class="fas fa-code"></i> Code
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="bibtex-content" style="display: none;">
+                        <pre>
+@article{zhang2024can,
+    title={Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise Sustainability Awareness},
+    author={Zhang, Qinshi and Wen, Ruoyu and Ding, Zijian and Hendra, Latisha Besariani and LC, Ray},
+    journal={arXiv preprint arXiv:2409.08486},
+    year={2024}
+}
+                </pre>
                     </div>
                 </div>
             </div>
+
+            <div class="publication-container">
+                <div class="publication-item">
+                    <div class="publication-content">
+                        <div class="publication-image">
+                            <img src="./images/Etergram.png" alt="Etergram Publication">
+                        </div>
+                        <div class="publication-info">
+                            <h3>Eternagram: Probing Player Attitudes in Alternate Climate Scenarios Through a
+                                ChatGPT-Driven Text Adventure</h3>
+                            <p class="authors">Suifang Zhou*, Latisha Besariani Hendra*, <strong>Qinshi Zhang*</strong>,
+                                Jussi Holopainen, Ray LC†</p>
+                            <p class="venue">CHI Conference on Human Factors in Computing Systems 2024</p>
+                            <div class="publication-links">
+                                <a href="https://recfro.github.io/eternagram/" class="btn btn-sm">
+                                    <i class="fas fa-project-diagram"></i> Project
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=lvC-KcD2qRE&t=6s" class="btn btn-sm">
+                                    <i class="fas fa-video"></i> Video
+                                </a>
+                                <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850" class="btn btn-sm"><i
+                                        class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="https://github.com/Carolzhangzz/Eternagram_" class="btn btn-sm"><i
+                                        class="fas fa-code"></i> Code <span class="star-count">★</span></a>
+                            </div>
+                            <div class="publication-extra">
+                                <a href="#" class="btn btn-sm bibtex-toggle"><i class="fas fa-book"></i> BibTeX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bibtex-content" style="display: none;">
+                        <pre>
+@inproceedings{zhou2024eternagram,
+    title={Eternagram: Probing Player Attitudes Towards Climate Change Using a ChatGPT-driven Text-based Adventure},
+    author={Zhou, Suifang and Hendra, Latisha Besariani and Zhang, Qinshi and Holopainen, Jussi and LC, RAY},
+    booktitle={Proceedings of the CHI Conference on Human Factors in Computing Systems},
+    pages={1--23},
+    year={2024}
+}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-container">
+                <div class="publication-item">
+                    <div class="publication-content">
+                        <div class="publication-image">
+                            <img src="./images/FD.png" alt="FD Publication">
+                        </div>
+                        <div class="publication-info">
+                            <h3>Frontend Diffusion:
+                                Empowering Self-Representation of Researchers and
+                                Designers with Multi-agent System</h3>
+                            <p class="authors"> Zijian Ding, <strong>Qinshi Zhang</strong>, Mohan Chi, Ziyi Wang</p>
+                            <p class="venue">IEEE Symposium on Visual Languages and Human-Centric Computing 2025</p>
+                            <!-- <p class="venue">In preparation for 
+                                    href="https://chi2024.acm.org/for-authors/late-breaking-work/">C&C 2025</a></p> -->
+                            <div class="publication-links">
+                                <a href="https://x.com/jasonzding/status/1814046922874724767" class="btn btn-sm"><i
+                                        class="fas fa-video"></i> Video</a>
+                                <a href="./PDF/VLHCC25_FD.pdf" class="btn btn-sm"><i class="fas fa-file-pdf"></i>
+                                    PDF</a>
+                                <a href="https://github.com/Carolzhangzz/frontendiffusion" class="btn btn-sm"><i
+                                        class="fas fa-code"></i> Code <span class="star-count">★</span></a>
+                            </div>
+                            <div class="publication-extra">
+                                <a href="#" class="btn btn-sm bibtex-toggle"><i class="fas fa-book"></i> BibTeX</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bibtex-content" style="display: none;">
+                        <pre>
+@article{zhang2024frontend,
+    title={Frontend Diffusion:
+Empowering Self-Representation of Researchers and
+Designers with Multi-agent System},
+    author={Ding, Zijian, Zhang, Qinshi, Chi, Mohan, WANG, Ziyi},
+    journal={arXiv e-prints},
+    pages={arXiv--2408},
+    year={2024}
+}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Projects</h2>
+            <div class="publication-container">
+                <div class="publication-item">
+                    <div class="publication-content">
+                        <div class="publication-image">
+                            <img src="./images/d4sd.png" alt="D4SD 2024 Publication" class="scaled-image">
+                        </div>
+                        <div class="publication-info">
+                            <h3>Design for San Diego 2024</h3>
+                            <p class="venue">Served as Web Dev Lead</p>
+                            <div class="publication-links">
+                                <a href="https://d4sd2024.ucsd.edu/" class="btn btn-sm">
+                                    <i class="fas fa-link"></i> Visit Website
+                                </a>
+                                <a href="https://d4sd2024.ucsd.edu/about/" class="btn btn-sm">
+                                    <i class="fas fa-users"></i> About Our Team
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class="publication-item">
+                    <div class="publication-content">
+                        <div class="publication-image">
+                            <img src="./images/jupyter.png" alt="jupyter" class="scaled-image">
+                        </div>
+                        <div class="publication-info">
+                            <h3>Classifying Applications, Structure,
+                                and Data Transformations in Jupyter
+                                Notebooks</h3>
+                            <p class="venue">Jacob Yim*, Qinshi Zhang*</p>
+                            <p class="venue">An Exploratory Study</p>
+                            <div class="publication-links">
+                                <a href="./PDF/notebooks.pdf" class="btn btn-sm">
+                                    <i class="fas fa-link"></i> PDF
+                                </a>
+                                <a href="./PDF/CSE 291B00 Project Presentation.pdf"
+                                    class="btn btn-sm" target="_blank">
+                                    <i class="fas fa-slideshare"></i> Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-content">
+                        <div class="publication-image">
+                            <img src="./images/multimodal-news.png" alt="Multimodal News RecSys" class="scaled-image">
+                        </div>
+                        <div class="publication-info">
+                            <h3>Multimodal News Recommendation</h3>
+                            <p class="venue">
+                                Multimodal News Recommendation: MMGCN collaborative baseline vs. content-based methods
+                            </p>
+                            <p class="venue">
+                                <strong>Focus:</strong> benchmarking MMGCN vs. content-only (text + price)<br>
+                                with partial use of image features (CLIP) and exploring fusion strategies for
+                                cold-start.
+                            </p>
+                            <div class="publication-links">
+                                <a href="https://github.com/Carolzhangzz/Multimodal-News-RecSys" class="btn btn-sm">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://amazon-reviews-2023.github.io/" class="btn btn-sm">
+                                    <i class="fas fa-database"></i> Dataset (Amazon Reviews’23)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
         </section>
+
+
 
         <section id="news">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">News</h2>
+            <h2>News</h2>
+            <div class="news-container">
+                <div class="news-item">
+                    <span class="date">2025.09</span>
+                    <div class="news-content">
+                        I will attend
+                        <a href="https://neurips.cc/Conferences/2025">NeurIPS'25</a>
+                        (Dec 2–7, San Diego Convention Center).
+                    </div>
                 </div>
-                
-                <div class="news-grid">
-                    <div class="news-item">
-                        <div class="news-date">2025.09</div>
-                        <div class="news-content">
-                            I will attend <a href="https://neurips.cc/Conferences/2025">NeurIPS'25</a> (Dec 2–7, San Diego Convention Center).
-                        </div>
+                <div class="news-item">
+                    <span class="date">2025.08</span>
+                    <div class="news-content">
+                        Our paper,
+                        <a href="./PDF/VLHCC25_FD.pdf">Frontend Diffusion</a>,
+                        has been accepted at IEEE VL/HCC 2025!
                     </div>
-                    
-                    <div class="news-item">
-                        <div class="news-date">2025.08</div>
-                        <div class="news-content">
-                            Our paper, <a href="./PDF/VLHCC25_FD.pdf">Frontend Diffusion</a>, has been accepted at VLHCC 25!
-                        </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2025.01</span>
+                    <div class="news-content">
+                        Our paper,
+                        <a href="https://dl.acm.org/doi/10.1145/3706598.3713661">Can AI Prompt Humans</a>,
+                        has been fully accepted at CHI 2025!
                     </div>
-                    
-                    <div class="news-item">
-                        <div class="news-date">2025.01</div>
-                        <div class="news-content">
-                            Our paper, <a href="https://dl.acm.org/doi/10.1145/3706598.3713661">Can AI Prompt Humans</a>, has been fully accepted at CHI 2025!
-                        </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2024.10</span>
+                    <div class="news-content">
+                        <p>Attending <a href="https://uist.acm.org/2024/">UIST'24</a>, See you in Pittsburgh !</p>
                     </div>
-                    
-                    <div class="news-item">
-                        <div class="news-date">2024.10</div>
-                        <div class="news-content">
-                            Attending <a href="https://uist.acm.org/2024/">UIST'24</a>, See you in Pittsburgh!
-                        </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2024.09</span>
+                    <div class="news-content">
+                        <p>Begin my MSCS program at <a href="https://ucsd.edu/">UCSD</a> this fall! See you in San
+                            Diego!</p>
                     </div>
-                    
-                    <div class="news-item">
-                        <div class="news-date">2024.09</div>
-                        <div class="news-content">
-                            Begin my MSCS program at <a href="https://ucsd.edu/">UCSD</a> this fall! See you in San Diego!
-                        </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2024.06</span>
+                    <div class="news-content">
+                        <p>Starting my internship at <a href="https://designlab.ucsd.edu/">UC San Diego Design Lab</a>
+                            this July. Excited to contribute to the <a href="https://d4sd.org/">D4SD</a> 2024 program!
+                        </p>
                     </div>
-                    
-                    <div class="news-item">
-                        <div class="news-date">2024.06</div>
-                        <div class="news-content">
-                            Starting my internship at <a href="https://designlab.ucsd.edu/">UC San Diego Design Lab</a> this July. Excited to contribute to the <a href="https://d4sd.org/">D4SD</a> 2024 program!
-                        </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2024.01</span>
+                    <div class="news-content">
+                        <p>Serving as a Student Volunteer at <a href="https://chi2024.acm.org/">CHI 2024</a>! See you in
+                            Hawai'i!</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2024.01</span>
+                    <div class="news-content">
+                        <p>One Paper accepted to <a href="https://chi2024.acm.org/">CHI Conference on Human Factors in
+                                Computing Systems</a>.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2023.11</span>
+                    <div class="news-content">
+                        <p>Served as a Volunteer at <a href="https://chchi2023.icachi.org/">Chinese CHI 2023</a>.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="date">2023.07</span>
+                    <div class="news-content">
+                        <p>Starting a research-based program at <a href="https://www.uci.edu/">UC Irvine</a> this
+                            September!</p>
                     </div>
                 </div>
             </div>
+            <button id="show-more-btn" class="show-more">+ show more</button>
         </section>
+
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="./cv.html"><i class="far fa-file-alt"></i></a>
-                <a href="https://github.com/Carolzhangzz"><i class="fab fa-github"></i></a>
-                <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://x.com/Carol_Zhang1027"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/qinshiz/"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:qiz065@ucsd.edu"><i class="far fa-envelope"></i></a>
-            </div>
-            <p>© 2024 Qinshi (Carol) Zhang</p>
+        <p>Designed and built by Qinshi (Carol) Zhang <i class="fas fa-heart"></i>.</p>
+        <div class="footer-links">
+            <a href="./cv.html"><i class="far fa-file-alt"></i></a>
+            <a href="https://github.com/Carolzhangzz"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao"><i
+                    class="fas fa-graduation-cap"></i></a>
+            <a href="https://x.com/Carol_Zhang1027"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/qinshiz/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:qiz065@ucsd.edu"><i class="far fa-envelope"></i></a>
         </div>
+        <p>© 2024 Qinshi (Carol) Zhang</p>
     </footer>
+    <script src="style.js"></script>
 </body>
 
 </html>
