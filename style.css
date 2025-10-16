@@ -133,6 +133,29 @@ h2::after {
   transform: scale(1.05);
 }
 
+
+.social-links {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap; /* 自动换行 */
+  gap: 25px;       /* 图标之间的间距 */
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a img {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-links a:hover img,
+.social-links a:hover i {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+
 .social-links {
   margin-bottom: 1rem;
 }
@@ -642,3 +665,10 @@ footer {
     font-size: 0.7rem;
   }
 }
+
+@media (max-width: 600px) {
+  .social-links {
+    gap: 18px;
+  }
+}
+
