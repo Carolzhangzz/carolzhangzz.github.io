@@ -18,6 +18,30 @@
   box-sizing: border-box;
 }
 
+.social-icon {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* 图标和文字间距 */
+}
+
+.social-icon i {
+  font-size: 22px; /* 调整图标大小 */
+  font-weight: 700; /* 让图标看起来更厚实 */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  color: #1a1a1a;
+}
+
+.social-icon:hover i {
+  transform: scale(1.1); /* 悬停时微微放大 */
+}
+
+
 /* ========== Body & Main Layout ========== */
 body {
   font-family: var(--body-font);
