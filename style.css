@@ -7,8 +7,8 @@
   --light-bg-color: #f9fafb;      /* 模块浅背景 */
   --text-color: #1e1e1e;          /* 主体文字颜色 */
   --border-color: #e5e7eb;        /* 边框颜色 */
-  --heading-font: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --body-font: "Inter", "Open Sans", sans-serif;
+  --heading-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --body-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans", sans-serif;
 }
 
 /* ========== Global Reset ========== */
@@ -45,11 +45,14 @@
 /* ========== Body & Main Layout ========== */
 body {
   font-family: var(--body-font);
-  font-size: 14px;  /* 稍小一点的基础字号 */
-  line-height: 1.6;
+  font-size: 15px;  /* 从14px增加到15px,提升可读性 */
+  line-height: 1.7; /* 从1.6增加到1.7,提升行间距 */
   color: var(--text-color);
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 400; /* 明确设置正常字重 */
 }
 
 main {
@@ -62,17 +65,19 @@ main {
 h1, h2, h3 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-  letter-spacing: 0.3px;
+  letter-spacing: -0.02em; /* 稍微紧凑的字母间距,提升视觉清晰度 */
+  font-weight: 600; /* 统一设置稍重的字重 */
 }
 
 h1 {
-  font-size: 2.3rem;
+  font-size: 2.4rem; /* 从2.3rem增加 */
   font-weight: 700;
   margin-bottom: 1rem;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.65rem; /* 从1.6rem增加 */
   font-weight: 600;
   margin: 1.8rem 0 1rem;
   border-bottom: 2px solid var(--border-color);
@@ -80,7 +85,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem; /* 从1.2rem增加 */
   font-weight: 600;
   margin-bottom: 0.6rem;
   color: #222;
@@ -117,7 +122,7 @@ a:hover {
   border: 1px solid #e2e8f0;
   border-radius: 9999px;
   padding: 0.45rem 0.9rem;
-  font-size: 14px;
+  font-size: 14.5px; /* 从14px增加 */
   font-weight: 500;
   color: #1e293b;
   box-shadow: 0 1px 2px rgba(0,0,0,0.04);
@@ -146,9 +151,10 @@ a:hover {
 
 .profile-text p {
   margin-bottom: 1.1rem;
-  font-size: 15px;
-  line-height: 1.75;
-  color: #333;
+  font-size: 15.5px; /* 从15px增加到15.5px */
+  line-height: 1.8;  /* 从1.75增加到1.8 */
+  color: #2c2c2c;    /* 从#333调整为稍深的颜色,提升对比度 */
+  font-weight: 400;  /* 明确字重 */
 }
 
 .profile-image { flex: 1; text-align: center; }
@@ -224,16 +230,18 @@ a:hover {
 }
 
 .publication-info h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem; /* 从1.25rem增加 */
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 0.4rem;
+  line-height: 1.4; /* 添加行高 */
 }
 
 .authors, .venue {
-  font-size: 0.9rem;
+  font-size: 0.95rem; /* 从0.9rem增加 */
   color: #555;
   margin-bottom: 0.4rem;
+  line-height: 1.6; /* 添加行高 */
 }
 
 .publication-links {
@@ -258,8 +266,9 @@ a:hover {
 
 .btn-sm {
   background-color: #e8f4fd;
-  font-size: 0.85rem;
+  font-size: 0.88rem; /* 从0.85rem增加 */
   color: var(--secondary-color);
+  font-weight: 600; /* 添加字重 */
 }
 .btn-sm:hover { background-color: #d0e8f9; }
 
@@ -289,8 +298,8 @@ a:hover {
 }
 
 .date {
-  flex: 0 0 80px;
-  font-size: 0.85rem;
+  flex: 0 0 85px; /* 从80px增加 */
+  font-size: 0.88rem; /* 从0.85rem增加 */
   font-weight: 600;
   color: #555;
   margin-right: 1rem;
@@ -298,9 +307,9 @@ a:hover {
 
 .news-content {
   flex: 1;
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.5;
+  font-size: 0.98rem; /* 从0.95rem增加 */
+  color: #2c2c2c; /* 从#333调深,增加对比度 */
+  line-height: 1.65; /* 添加行高 */
 }
 
 .news-item.hidden {
@@ -351,6 +360,112 @@ footer i { color: var(--tertiary-color); }
 }
 .footer-links a:hover { color: var(--tertiary-color); }
 
+/* ========== PhD Resources Toggle Button ========== */
+.phd-resources-toggle {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.resources-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.95rem; /* 从0.9rem增加 */
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.2);
+}
+
+.resources-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.resources-btn i:last-child {
+  transition: transform 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.resources-btn.active i:last-child {
+  transform: rotate(180deg);
+}
+
+.resources-dropdown {
+  margin-top: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.resources-dropdown.show {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.resources-dropdown.hidden {
+  display: block;
+}
+
+.resources-compact {
+  background-color: var(--light-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resource-section {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resource-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.resource-section h4 {
+  font-size: 0.9rem; /* 从0.85rem增加 */
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.resource-section h4 i {
+  font-size: 0.95rem; /* 从0.9rem增加 */
+  color: var(--secondary-color);
+}
+
+.resource-section a {
+  display: block;
+  font-size: 0.87rem; /* 从0.82rem增加 */
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  padding-left: 1.3rem;
+  transition: all 0.2s ease;
+  font-weight: 400; /* 添加字重 */
+}
+
+.resource-section a:hover {
+  color: #1d4ed8;
+  padding-left: 1.5rem;
+  text-decoration: underline;
+}
+
 /* ========== Responsive Design ========== */
 @media (max-width: 1024px) {
   .profile-content { flex-direction: column; text-align: center; align-items: center; }
@@ -358,8 +473,21 @@ footer i { color: var(--tertiary-color); }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.4rem; }
-  body { font-size: 13.5px; }
+  h1 { font-size: 2.1rem; } /* 从2rem增加 */
+  h2 { font-size: 1.45rem; } /* 从1.4rem增加 */
+  body { font-size: 14px; } /* 从13.5px增加 */
   .profile-photo { width: 160px; height: 160px; }
+  
+  .resources-btn {
+    font-size: 0.88rem; /* 从0.85rem增加 */
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .resources-compact {
+    padding: 1rem;
+  }
+  
+  .resource-section a {
+    font-size: 0.82rem; /* 从0.78rem增加 */
+  }
 }
