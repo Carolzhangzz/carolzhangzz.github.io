@@ -4,140 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qinshi Carol Zhang- CV</title>
+    <title>CV | Qinshi (Carol) Zhang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="cv.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#publications">Papers</a>
+                <a href="index.html#news">News</a>
+                <a href="blog.html">Blog</a>
+                <a href="cv.html" class="active">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="cv-header">
         <h1>Qinshi (Carol) Zhang</h1>
-        <p>
-            <a href="https://carolzhangzz.github.io/">https://carolzhangzz.github.io/</a>
-            <a href="mailto:qiz@ucsd.edu">qiz065@ucsd.edu</a>
-        </p>
+        <div class="contact-info">
+            <a href="https://carolzhangzz.github.io/">carolzhangzz.github.io</a>
+            <span class="separator">|</span>
+            <a href="mailto:qiz065@ucsd.edu">qiz065@ucsd.edu</a>
+        </div>
     </header>
 
-    <main>
-        <section id="publications">
-            <h2>Research Interests</h2>
-            AI for Social Good , Human-AI Interaction, Natural Language Processing
+    <main class="cv-container">
+        <section id="interests">
+            <h2 class="section-title">Research Interests</h2>
+            <p>AI for Social Good, Human-AI Interaction, Natural Language Processing</p>
         </section>
+
         <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>University of California, San Diego (UCSD)</h3>
-                <p>Master of Science in Computer Science and Engineering</p>
-                <p>Sept. 2024 — Dec. 2025 (Expected)</p>
-                <p><strong>Current Curriculum: </strong>Programmers are humans too, Statistical Natural Language
-                    Processing, Interactive Design</p>
-
-                <!-- <p>Advisor: Duen Horng (Polo) Chau</p>
-                <p>Thesis: Democratizing Human-Centered AI with Visual Explanation and Interactive Guidance</p>
-                <p>Thesis Committee: Duen Horng (Polo) Chau, Judy Hoffman, Munmun De Choudhury, Lauren Wilcox, Jenn Wortman Vaughan, Rich Caruana</p> -->
+            <h2 class="section-title">Education</h2>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">University of California, San Diego (UCSD)</h3>
+                    <p class="degree">Master of Science in Computer Science and Engineering</p>
+                    <p class="curriculum"><strong>Current Curriculum:</strong> Programmers are humans too, Statistical Natural Language Processing, Interactive Design</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">San Diego, CA</span>
+                    <span class="date">Sept. 2024 — Dec. 2025 (Expected)</span>
+                </div>
             </div>
-            <div class="education-item">
-                <h3>University of California, Irvine (UCI)</h3>
-                <p>GSTAR in Computer Science, GPA: 3.84/4.00</p>
-                <p>Sept. 2023 — Jun. 2024</p>
-                <!-- <p>Majors: Computer Sciences (Honor), Statistics (Honor), Mathematics</p>
-                <p>Advisors: Anthony Gitter, Michael Gleicher, Yu Hen Hu</p>
-                <p>Thesis: Classifying T Cell Activity with Convolutional Neural Networks</p>
-                <p>Thesis Committee: Anthony Gitter, Ané Cécile, Sebastian Raschka</p> -->
-            </div>
-            <div class="education-item">
-                <h3>China Jiliang University (CJLU) & Auckland University of Technology (AUT)</h3>
-                <p>Bachelor of Computer and Information Sciences & B.Eng in Computer Science and Technology, GPA:
-                    7.13/9.00</p>
-                <p>Sept. 2019 — Jun. 2023</p>
-                <p>Thesis: Gstreamer-based Video Analysis Framework Design</p>
-                <p>Advisor: Dr. Haijun Tao & Dr.Lin Xiang</p>
+            
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">University of California, Irvine (UCI)</h3>
+                    <p class="degree">GSTAR in Computer Science, GPA: 3.84/4.00</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Irvine, CA</span>
+                    <span class="date">Sept. 2023 — Jun. 2024</span>
+                </div>
             </div>
 
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">China Jiliang University (CJLU) & Auckland University of Technology (AUT)</h3>
+                    <p class="degree">Bachelor of Computer and Information Sciences & B.Eng in Computer Science and Technology, GPA: 7.13/9.00</p>
+                    <p class="thesis">Thesis: Gstreamer-based Video Analysis Framework Design. Advisor: Dr. Haijun Tao & Dr. Lin Xiang</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Hangzhou, CN / Auckland, NZ</span>
+                    <span class="date">Sept. 2019 — Jun. 2023</span>
+                </div>
+            </div>
         </section>
 
         <section id="publications">
-            <h2>Publications</h2>
-            <h3>Conference</h3>
+            <h2 class="section-title">Publications</h2>
+            <h3 class="sub-section-title">Conference</h3>
 
-            <div class="publication-item">
-                <h4>Eternagram: Probing Player Attitudes in Alternate Climate Scenarios Through a ChatGPT-Driven Text
-                    Adventure</h4>
-                <p class="authors">Suifang Zhou*, Latisha Besariani Hendra*, <strong>Qinshi Zhang*</strong>, Jussi
-                    Holopainen, Ray LC†</p>
+            <div class="pub-item">
+                <h4 class="pub-title">Eternagram: Probing Player Attitudes in Alternate Climate Scenarios Through a ChatGPT-Driven Text Adventure</h4>
+                <p class="authors">Suifang Zhou*, Latisha Besariani Hendra*, <strong>Qinshi Zhang*</strong>, Jussi Holopainen, Ray LC†</p>
                 <p class="venue">CHI Conference on Human Factors in Computing Systems 2024</p>
-                <div class="links">
-                    <!-- <a href="#" class="project"><i class="fas fa-home"></i> Project</a>
-                    <a href="#" class="demo"><i class="fas fa-rocket"></i> Demo</a> -->
-                    <!-- <a href="#" class="video"><i class="fas fa-video"></i> Video</a> -->
-                    <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850" class="btn btn-sm"> <i
-                            class="fas fa-file-pdf"></i> PDF</a>
-                    <a href="https://github.com/Carolzhangzz/Eternagram_" class="btn btn-sm"> <i
-                            class="fas fa-code"></i> Code <span class="star-count">★</span></a>
-                    <a href="https://www.youtube.com/watch?v=lvC-KcD2qRE&t=6s" class="btn btn-sm">
-                        <i class="fas fa-video"></i> Video
-                    </a>
-                    <a href="https://recfro.github.io/eternagram/" class="btn btn-sm">
-                        <i class="fas fa-project-diagram"></i> Project
-                    </a>
-                    <!-- <a href="#" class="poster"><i class="fas fa-image"></i> Poster</a> -->
-                    <a href="#" class="bibtex-toggle"><i class="fas fa-quote-right"></i> BibTeX</a>
-                    <!-- <span class="award"><i class="fas fa-award"></i> Best Short Paper Award, Honorable Mention</span> -->
+                <div class="pub-links">
+                    <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="https://github.com/Carolzhangzz/Eternagram_"><i class="fas fa-code"></i> Code <span class="star">★</span></a>
+                    <a href="https://www.youtube.com/watch?v=lvC-KcD2qRE&t=6s"><i class="fas fa-video"></i> Video</a>
+                    <a href="https://recfro.github.io/eternagram/"><i class="fas fa-project-diagram"></i> Project</a>
+                    <button class="bibtex-toggle"><i class="fas fa-quote-right"></i> BibTeX</button>
                 </div>
                 <div class="bibtex-content" style="display: none;">
-                    <pre><code>
-    @inproceedings{zhou2024eternagram,
-        title={Eternagram: Probing Player Attitudes Towards Climate Change Using a ChatGPT-driven Text-based Adventure},
-        author={Zhou, Suifang and Hendra, Latisha Besariani and Zhang, Qinshi and Holopainen, Jussi and LC, RAY},
-        booktitle={Proceedings of the CHI Conference on Human Factors in Computing Systems},
-        pages={1--23},
-        year={2024}
-        }
-                    </code></pre>
+                    <pre><code>@inproceedings{zhou2024eternagram,
+    title={Eternagram: Probing Player Attitudes Towards Climate Change Using a ChatGPT-driven Text-based Adventure},
+    author={Zhou, Suifang and Hendra, Latisha Besariani and Zhang, Qinshi and Holopainen, Jussi and LC, RAY},
+    booktitle={Proceedings of the CHI Conference on Human Factors in Computing Systems},
+    pages={1--23},
+    year={2024}
+}</code></pre>
                 </div>
             </div>
 
-            <div class="publication-item">
-                <h4>Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise
-                    Sustainability Awareness</h4>
-                <p class="authors"><strong>Qinshi Zhang</strong>, Ruoyu Wen, Zijian Ding, Latisha Besariani Hendra, Ray
-                    LC†</p>
+            <div class="pub-item">
+                <h4 class="pub-title">Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise Sustainability Awareness</h4>
+                <p class="authors"><strong>Qinshi Zhang</strong>, Ruoyu Wen, Zijian Ding, Latisha Besariani Hendra, Ray LC†</p>
                 <p class="venue">CHI Conference on Human Factors in Computing Systems 2025</p>
-                <div class="links">
-                    <a href="https://ecoecho.duckdns.org/" class="btn btn-sm"><i class="fas fa-play"></i> Demo</a>
-                    <a href="./PDF/GameSustainability_CHI_25__Clean_Version_.pdf" class="btn btn-sm"><i
-                            class="fas fa-file-pdf"></i>
-                        PDF</a>
-                    <a href="https://github.com/Carolzhangzz/Eco_Echo" class="btn btn-sm"><i class="fas fa-code"></i>
-                        Code <span class="star-count">★</span></a>
-                    <a href="#" class="bibtex-toggle"><i class="fas fa-quote-right"></i> BibTeX</a>
+                <div class="pub-links">
+                    <a href="https://ecoecho.duckdns.org/"><i class="fas fa-play"></i> Demo</a>
+                    <a href="./PDF/GameSustainability_CHI_25__Clean_Version_.pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="https://github.com/Carolzhangzz/Eco_Echo"><i class="fas fa-code"></i> Code <span class="star">★</span></a>
+                    <button class="bibtex-toggle"><i class="fas fa-quote-right"></i> BibTeX</button>
                 </div>
                 <div class="bibtex-content" style="display: none;">
                     <pre><code>@article{zhang2024can,
-                title={Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise Sustainability Awareness},
-                author={Zhang, Qinshi and Wen, Ruoyu and Ding, Zijian and Hendra, Latisha Besariani and LC, Ray},
-                journal={arXiv preprint arXiv:2409.08486},
-                year={2024}/Users/carol/Desktop/CHI25/GameSustainability_CHI_25__Clean_Version_.pdf
-            }</code></pre>
+    title={Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise Sustainability Awareness},
+    author={Zhang, Qinshi and Wen, Ruoyu and Ding, Zijian and Hendra, Latisha Besariani and LC, Ray},
+    journal={arXiv preprint arXiv:2409.08486},
+    year={2024}
+}</code></pre>
                 </div>
             </div>
 
-            <!-- Add more publication items as needed
-            <h3>Demo</h3> -->
-            <div class="publication-item">
-                <h4>Frontend Diffusion:
-                    Empowering Self-Representation of Researchers and Designers with Multi-agent System</h4>
+            <div class="pub-item">
+                <h4 class="pub-title">Frontend Diffusion: Empowering Self-Representation of Researchers and Designers with Multi-agent System</h4>
                 <p class="authors">Zijian Ding, <strong>Qinshi Zhang</strong>, Mohan Chi, Ziyi Wang</p>
                 <p class="venue">IEEE Symposium on Visual Languages and Human-Centric Computing (VLHCC) 2025</p>
-                <div class="links">
-                    <a href="https://x.com/jasonzding/status/1814046922874724767" class="btn btn-sm"><i
-                            class="fas fa-video"></i> Video</a>
-                    <a href="./PDF/VLHCC25_FD.pdf" class="btn btn-sm"><i class="fas fa-file-pdf"></i>
-                        PDF</a>
-                    <a href="https://github.com/Carolzhangzz/frontendiffusion" class="btn btn-sm"><i
-                            class="fas fa-code"></i>
-                        Code <span class="star-count">★</span></a>
-                    <a href="#" class="bibtex-toggle"><i class="fas fa-quote-right"></i> BibTeX</a>
+                <div class="pub-links">
+                    <a href="https://x.com/jasonzding/status/1814046922874724767"><i class="fas fa-video"></i> Video</a>
+                    <a href="./PDF/VLHCC25_FD.pdf"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="https://github.com/Carolzhangzz/frontendiffusion"><i class="fas fa-code"></i> Code <span class="star">★</span></a>
+                    <button class="bibtex-toggle"><i class="fas fa-quote-right"></i> BibTeX</button>
                 </div>
                 <div class="bibtex-content" style="display: none;">
                     <pre><code>@article{zhang2024frontend,
@@ -149,280 +144,200 @@
 }</code></pre>
                 </div>
             </div>
-
         </section>
-        <section id="academic-research">
-            <h2>Academic Research Experience</h2>
-            <p class="note">(*Detailed descriptions available in the PDF CV)</p>
 
-            <!-- UCSD ProtoLab / Design Lab -->
-            <div class="research-item">
-                <h3>University of California, San Diego <span class="location">San Diego, CA</span></h3>
-                <p class="position">
-                    <a href="https://d4sd2024.ucsd.edu/">Design for San Diego (D4SD) & ProtoLab Research Assistant</a>,
-                    UCSD Design Lab
-                </p>
-                <p class="date">Nov. 2024 — Present</p>
-                <a href="https://spdow.ucsd.edu/">Mentor: Prof. Steven Dow</a>
-
-                <p class="description">
-                    Research on AI-supported design collaboration and dimensional scaffolding for team creativity.
-                </p>
+        <section id="research-experience">
+            <h2 class="section-title">Academic Research Experience</h2>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">University of California, San Diego</h3>
+                    <p class="position"><a href="https://d4sd2024.ucsd.edu/">Design for San Diego (D4SD) & ProtoLab Research Assistant</a>, UCSD Design Lab</p>
+                    <p class="mentor">Mentor: <a href="https://spdow.ucsd.edu/">Prof. Steven Dow</a></p>
+                    <p class="description">Research on AI-supported design collaboration and dimensional scaffolding for team creativity.</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">San Diego, CA</span>
+                    <span class="date">Nov. 2024 — Present</span>
+                </div>
             </div>
 
-            <!-- UCI INsite -->
-            <div class="research-item">
-                <h3>University of California, Irvine <span class="location">Irvine, CA</span></h3>
-                <p class="position">
-                    <a
-                        href="https://docs.google.com/presentation/d/1FwsP9Hcv3w_6Mi_2hffRKxGUDm9jCf6epaAJN-iBas4/edit?usp=sharing">
-                        Summer Research Intern
-                    </a>, UCI INsite
-                </p>
-                <p class="date">June. 2024 — Sept. 2024</p>
-                <a href="https://www.stacybranham.com/">Mentor: Prof. Stacy Branham</a>
-
-                <p class="description">
-                    Studied ADA Title II compliance and digital accessibility issues in university systems.
-                </p>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">University of California, Irvine</h3>
+                    <p class="position"><a href="https://docs.google.com/presentation/d/1FwsP9Hcv3w_6Mi_2hffRKxGUDm9jCf6epaAJN-iBas4/edit?usp=sharing">Summer Research Intern</a>, UCI INsite</p>
+                    <p class="mentor">Mentor: <a href="https://www.stacybranham.com/">Prof. Stacy Branham</a></p>
+                    <p class="description">Studied ADA Title II compliance and digital accessibility issues in university systems.</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Irvine, CA</span>
+                    <span class="date">June. 2024 — Sept. 2024</span>
+                </div>
             </div>
 
-            <!-- CityU HCIX 2024 -->
-            <div class="research-item">
-                <h3>City University of Hong Kong <span class="location">Hong Kong, CN</span></h3>
-                <p class="position">
-                    <a href="https://dl.acm.org/doi/10.1145/3706598.3713661">Research Assistant,</a> Studio for
-                    Narrative Space
-                </p>
-                <p class="date">June. 2024 — Sept. 2024</p>
-                <a href="https://www.scm.cityu.edu.hk/people/ray-lc">Mentor: Dr. Ray LC</a>
-
-                <p class="description">
-                    Led research on a multimodal AI-driven sustainability game (CHI 2025).
-                </p>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">City University of Hong Kong</h3>
+                    <p class="position"><a href="https://dl.acm.org/doi/10.1145/3706598.3713661">Research Assistant</a>, Studio for Narrative Space</p>
+                    <p class="mentor">Mentor: <a href="https://www.scm.cityu.edu.hk/people/ray-lc">Dr. Ray LC</a></p>
+                    <p class="description">Led research on a multimodal AI-driven sustainability game (CHI 2025).</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Hong Kong, CN</span>
+                    <span class="date">June. 2024 — Sept. 2024</span>
+                </div>
             </div>
 
-            <!-- CityU HCIX 2023 -->
-            <div class="research-item">
-                <h3>City University of Hong Kong <span class="location">Hong Kong, CN</span></h3>
-                <p class="position">
-                    <a href="https://recfro.github.io/eternagram/">HCIX Summer Research Program,</a>
-                    Studio For Narrative Space
-                </p>
-                <p class="date">June. 2023 — Sept. 2023</p>
-
-                <p class="description">
-                    Designed and evaluated an AI chatbot game for studying climate attitude change (CHI 2024).
-                </p>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">City University of Hong Kong</h3>
+                    <p class="position"><a href="https://recfro.github.io/eternagram/">HCIX Summer Research Program</a>, Studio For Narrative Space</p>
+                    <p class="mentor">Mentor: <a href="https://www.scm.cityu.edu.hk/people/ray-lc">Dr. Ray LC</a></p>
+                    <p class="description">Designed and evaluated an AI chatbot game for studying climate attitude change (CHI 2024).</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Hong Kong, CN</span>
+                    <span class="date">June. 2023 — Sept. 2023</span>
+                </div>
             </div>
 
-            <!-- China Jiliang University -->
-            <div class="research-item">
-                <h3>China Jiliang University<span class="location">Hangzhou, CN</span></h3>
-                <p class="position">
-                    <a href="./PDF/poster.pdf#page=6.76">Undergraduate Research, </a>
-                    Institute of Computer Technology and Applications
-                </p>
-                <p class="date">Sept. 2022 — May. 2023</p>
-                <p class="mentor">Dr. Haijun Tao & Dr. Lin Xiang</p>
-
-                <p class="description">
-                    Built a real-time object detection system using Gstreamer and YOLOv5.
-                </p>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">China Jiliang University</h3>
+                    <p class="position"><a href="./PDF/poster.pdf#page=6.76">Undergraduate Research Assistant</a>, Institute of Computer Technology and Applications</p>
+                    <p class="mentor">Mentor: Dr. Haijun Tao & Dr. Lin Xiang</p>
+                    <p class="description">Built a real-time object detection system using Gstreamer and YOLOv5.</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Hangzhou, CN</span>
+                    <span class="date">Sept. 2022 — May. 2023</span>
+                </div>
             </div>
 
-            <!-- AUT -->
-            <div class="research-item">
-                <h3>Auckland University of Technology<span class="location">Auckland, NZ</span></h3>
-                <p class="position">
-                    <a href="./PDF/Final_Brief.pdf">Undergraduate Research, </a>
-                    Data Science Research Centre
-                </p>
-                <p class="date">Sept. 2022 — Dec. 2022</p>
-                <a href="https://academics.aut.ac.nz/mahsa.mohaghegh">Mentor: Dr. Mahsa Mohaghegh</a>
-
-                <p class="description">
-                    Developed a Raspberry Pi–based robotic system for automatic ping-pong ball collection.
-                </p>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">Auckland University of Technology</h3>
+                    <p class="position"><a href="./PDF/Final_Brief.pdf">Undergraduate Research Assistant</a>, Data Science Research Centre</p>
+                    <p class="mentor">Mentor: <a href="https://academics.aut.ac.nz/mahsa.mohaghegh">Dr. Mahsa Mohaghegh</a></p>
+                    <p class="description">Developed a Raspberry Pi–based robotic system for automatic ping-pong ball collection.</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Auckland, NZ</span>
+                    <span class="date">Sept. 2022 — Dec. 2022</span>
+                </div>
             </div>
         </section>
 
-
-
-        <!-- 
-        <section id="academic-research">
-            <h2>Academic Research Experience</h2>
-
-            <div class="research-item">
-                <h3>University of California, San Diego <span class="location">San Diego, CA</span></h3>
-                <p class="position"> <a href="https://d4sd2024.ucsd.edu/">Design for San Diego (D4SD) 2024 Internship
-                        Program,</a> UCSD Design Lab</p>
-                <p class="date">June. 2024 — Present</p>
-                <a href=" https://spdow.ucsd.edu/">Mentor: Prof.Steven Dow</a>
-                <p class="description">
-                    Collaborated with the visual design, research, content teams, and other teams to address
-                    housing issues in San Diego. </p>
-                <p class="description">
-                    Served as the lead developer for the D4SD website, utilizing WordPress for design and functionality.
-                </p>
+        <section id="industry-experience">
+            <h2 class="section-title">Industry Experience</h2>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">China Mobile</h3>
+                    <p class="position">AI Software Engineer Intern (NLP)</p>
+                    <p class="description">Designed a cold-start recommendation pipeline with LightGCN and content-based baselines; built feature extraction modules on Amazon Reviews’23 dataset.</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">ShenZhen, CN</span>
+                    <span class="date">June 2025 — Sept. 2025</span>
+                </div>
             </div>
 
-            <div class="research-item">
-                <h3>University of California, Irvine <span class="location">Irvine, CA</span></h3>
-                <p class="position"><a
-                        href="https://docs.google.com/presentation/d/1FwsP9Hcv3w_6Mi_2hffRKxGUDm9jCf6epaAJN-iBas4/edit?usp=sharing">Summer
-                        Research Intern,</a> UCI INsite</p>
-                <p class="date">June. 2024 — Sept. 2024</p>
-                <a href="https://www.stacybranham.com/">Mentor: Prof. Stacy Branham</a>
-                <p class="description">
-                    Led team meeting coordination and slide presentation preparations and engaged in deep analysis and
-                    presentation of ADA Title II.</p>
-                <p class="description">
-                    Explored and researched accessibility resources on the UCI ICS website, preparing detailed
-                    presentations on findings.</p>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">Neoboard</h3>
+                    <p class="position">Front-end Develop Intern</p>
+                    <p class="description">Built a user-friendly interface for a classroom workflow automation system using React, Redux, and React Router.</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Riverside, CA</span>
+                    <span class="date">April 2024 — June 2024</span>
+                </div>
             </div>
 
-            <div class="research-item">
-                <h3>City University of Hongkong <span class="location">Hongkong, CN</span></h3>
-                <p class="position"><a href="https://recfro.github.io/eternagram/">HCIX Summer Research Program,</a>
-                    Studio For Narrative Space</p>
-                <p class="date">June. 2023 — Sept.2023</p>
-                <a href="https://www.scm.cityu.edu.hk/people/ray-lc">Mentor: Dr. Ray LC</a>
-                <p class="description">Proposed the idea of a ChatGPT-based interactive game to promote climate change
-                    actions.</p>
-                <p class="description">Developed a world-building game utilizing GPT-4 and other NLP techniques</p>
-                <p class="description">Responsible for user studies of 33 participants, including recruiting,
-                    interviewing, data analysis,
-                    and writing, resulting a full paper to CHI’24.</p>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="institution">Functor Z</h3>
+                    <p class="position">Software Develop Intern</p>
+                    <p class="description">Developed a basketball mini-app game using Uni-app and MongoDB on a cloud-based platform.</p>
+                </div>
+                <div class="cv-item-side">
+                    <span class="location">Hangzhou, CN</span>
+                    <span class="date">June 2022 — Sept. 2022</span>
+                </div>
             </div>
-            <div class="research-item">
-                <h3>China Jiliang University<span class="location">Hangzhou, CN</span></h3>
-                <p class="position"><a href="./PDF/poster.pdf#page=6.76">Undergraduate Research, </a>Institute of
-                    Computer Technology and Applications </p>
-                <p class="date">Sept. 2022 — May. 2023</p>
-                <p class="mentor">Mentor: Dr. Haijun Tao & Dr.Lin Xiang</p>
-                <p class="description">Developed a real-time video analysis framework using Gstreamer and YOLOv5 for
-                    object and person detection, achieving a maximum frame rate of 121 frames per second for RTSP
-                    video streams. </p>
-                <p class="description"> Constructed a dataset by collecting real-time video monitoring and detection
-                    data. </p>
-            </div>
-            <div class="research-item">
-                <h3>Auckland University of Technology<span class="location">Auckland, NZ</span></h3>
-                <p class="position"><a href="./PDF/Final_Brief.pdf">Undergraduate Research, </a>Data Science Research
-                    Centre
-                </p>
-                <p class="date">Sept. 2022 — Dec. 2022</p>
-                <a
-                    href=" https://www.google.com/url?q=https://academics.aut.ac.nz/mahsa.mohaghegh&sa=D&source=apps-viewer-frontend&ust=1728500872758930&usg=AOvVaw3zeqr20VQksqWylsM8XTQc&hl=zh-CN">Mentor:
-                    Dr. Mahsa Mohaghegh</a>
-                <p class="description">Proposed the idea of using Raspberry Pi sensors to develop a robot that could
-                    automatically identify and pick up table tennis balls.</p>
-                <p class="description"> Responsible for research project writing and data analysis.</p>
-            </div>
-        </section> -->
-
-        <section id="industry-research">
-            <h2>Industry Experience</h2>
-            <div class="experience-item">
-                <h3>China Mobile<span class="location">ShenZhen, CN</span></h3>
-                <p class="position">AI Software Engineer Intern (NLP)</p>
-                <p class="date">June 2025 — Sept. 2025</p>
-                <p>Designed a cold-start recommendation pipeline with LightGCN and content-based baselines; built
-                    feature extraction modules and evaluation framework on Amazon Reviews’23 dataset.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Neoboard <span class="location">Riverside, CA</span></h3>
-                <p class="position">Front-end Develop Intern</p>
-                <p class="date">April 2024 — June 2024</p>
-                <p>Built a user-friendly interface for a classroom workflow automation system using React, Redux, and
-                    React Router.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Functor Z <span class="location">Hangzhou, CN</span></h3>
-                <p class="position">Software Develop Intern</p>
-                <p class="date">June 2022 — Sept. 2022</p>
-                <p>Developed a basketball mini-app game using Uni-app and MongoDB on a cloud-based platform.</p>
-            </div>
-
         </section>
 
         <section id="awards">
-            <h2>Awards and Honors</h2>
-
-            <div class="award-item">
-                <h3> <a href="./PDF/GreenBear- Recycling, Upcycling E-commerce Platform.pdf">2nd Prize,17th E-commerce
-                        Competition,</a> Zhejiang Province(Class A) <span class="date">2022</span></h3>
+            <h2 class="section-title">Awards and Honors</h2>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="award-title"><a href="./PDF/GreenBear- Recycling, Upcycling E-commerce Platform.pdf">2nd Prize, 17th E-commerce Competition, Zhejiang Province (Class A)</a></h3>
+                </div>
+                <div class="cv-item-side">
+                    <span class="date">2022</span>
+                </div>
             </div>
-            <div class="award-item">
-                <h3><a href="./PDF/Big-Data Certificate-unlocked.pdf">HCIA Big Data Engineer Certificate</a><span
-                        class="date">2020</span></h3>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="award-title"><a href="./PDF/Big-Data Certificate-unlocked.pdf">HCIA Big Data Engineer Certificate</a></h3>
+                </div>
+                <div class="cv-item-side">
+                    <span class="date">2020</span>
+                </div>
             </div>
-            <div class="award-item">
-                <h3>Academic Scholarship, CJLU<span class="date">2020</span></h3>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="award-title">Academic Scholarship, CJLU</h3>
+                </div>
+                <div class="cv-item-side">
+                    <span class="date">2020</span>
+                </div>
             </div>
-            <div class="award-item">
-                <h3>Merit Scholarships * 4, CJLU & AUT<span class="date">2019-2023</span></h3>
+            <div class="cv-item">
+                <div class="cv-item-main">
+                    <h3 class="award-title">Merit Scholarships * 4, CJLU & AUT</h3>
+                </div>
+                <div class="cv-item-side">
+                    <span class="date">2019-2023</span>
+                </div>
             </div>
         </section>
 
         <section id="service">
-            <h2>Service</h2>
-            <h3>Teaching Assistant</h3>
-            <p>Human-Centered AI (CSE 291A), UCSD <a href="https://hxi.ucsd.edu/author/nadir-weibel/">Prof. Nadir
-                    Weibel</a>, Fall 2025</p>
-            <h3>Volunteer </h3>
-            <p>Volunteer, CHI, 2024 </p>
-            <p>Volunteer, Chinese CHI, 2023 </p>
-            <h3>Conference Reviewer</h3>
-            <p>ACM Conference on Human Factors in Computing Systems (CHI) 2024</p>
-            <p>ACM Conference on Human Factors in Computing Systems (CHI) 2026</p>
-
-
+            <h2 class="section-title">Service</h2>
+            <div class="service-block">
+                <h3 class="sub-section-title">Teaching Assistant</h3>
+                <p>Human-Centered AI (CSE 291A), UCSD <a href="https://hxi.ucsd.edu/author/nadir-weibel/">Prof. Nadir Weibel</a>, Fall 2025</p>
+            </div>
+            <div class="service-block">
+                <h3 class="sub-section-title">Volunteer</h3>
+                <p>Volunteer, CHI 2024</p>
+                <p>Volunteer, Chinese CHI 2023</p>
+            </div>
+            <div class="service-block">
+                <h3 class="sub-section-title">Conference Reviewer</h3>
+                <p>ACM Conference on Human Factors in Computing Systems (CHI) 2024, 2026</p>
+            </div>
         </section>
-
 
         <section id="skills">
-            <h2>Skills</h2>
-
-            <h3>Programming Languages</h3>
-            <p>Python, JavaScript (ES6+), TypeScript, Java, C++, R, SQL, LaTeX, MATLAB, HTML/CSS</p>
-
-            <h3>Machine Learning & Natural Language Processing</h3>
-            <p>PyTorch, TensorFlow, LangChain, Hugging Face Transformers, Scikit-learn, Pandas, NLTK, spaCy,
-                SentenceTransformers, ConvAI, Groq, OpenAI API, LLaMA, BERT, GPT</p>
-
-            <h3>Web & Game Development</h3>
-            <p>React.js, Node.js, Express, Redux, Flask, JWT Auth, FastAPI, Django, Phaser, Unity (2D), RESTful APIs,
-                WebGL,
-                TailwindCSS</p>
-
-            <h3>Data Analysis & Visualization</h3>
-            <p>Pandas, NumPy, Matplotlib, Seaborn, Tableau, PowerBI, Kafka, Spark, Redis, PostgreSQL, MongoDB, Heroku
-            </p>
-
-            <h3>Design & User Experience</h3>
-            <p>Figma, Sketch, Adobe Illustrator, Photoshop, Canva, Storyboard Pro</p>
-
-            <h3>Tools & Platforms</h3>
-            <p>Git, Visual Studio Code, Notion,
-                Cursor, Linux (Shell/Ubuntu), AWS EC2, Azure, Firebase, Miro, Docker, Postman, WordPress, Vercel,
-                VMware, VirtualBox</p>
-
-            <h3>Languages</h3>
-            <p>Mandarin (native), English (fluent)</p>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-block">
+                <p><strong>Programming Languages:</strong> Python, JavaScript (ES6+), TypeScript, Java, C++, R, SQL, LaTeX, MATLAB, HTML/CSS</p>
+                <p><strong>Machine Learning & NLP:</strong> PyTorch, TensorFlow, LangChain, Hugging Face, Scikit-learn, Pandas, NLTK, spaCy, LLaMA, BERT, GPT</p>
+                <p><strong>Web & Game Development:</strong> React.js, Node.js, Express, Redux, Flask, JWT Auth, FastAPI, Django, Phaser, Unity (2D), TailwindCSS</p>
+                <p><strong>Data & Design:</strong> Pandas, NumPy, Tableau, PowerBI, Kafka, Spark, Redis, MongoDB, Figma, Sketch, Adobe Creative Suite</p>
+                <p><strong>Tools:</strong> Git, VS Code, Notion, Cursor, Linux (Shell), AWS EC2, Azure, Firebase, Miro, Docker</p>
+                <p><strong>Languages:</strong> Mandarin (native), English (fluent)</p>
+            </div>
         </section>
-
-
     </main>
 
     <footer>
-        <!-- Any footer content -->
+        <p>© Qinshi (Carol) Zhang | Last Updated Dec 2025</p>
     </footer>
 
     <script src="cv.js"></script>
 </body>
 
+</html>
 </html>

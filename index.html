@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qinshi (Carol) Zhang</title>
-    <!-- 只保留一个FontAwesome版本 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- 预加载关键CSS -->
@@ -14,17 +16,29 @@
 </head>
 
 <body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Carol Zhang</a>
+            <div class="nav-links">
+                <a href="#about">Home</a>
+                <a href="#publications">Papers</a>
+                <a href="#news">News</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./cv.html">CV</a>
+            </div>
+        </div>
+    </nav>
     <main>
         <section id="about">
-            <h1>Qinshi (Carol) Zhang</h1>
             <div class="profile-content">
+                <div class="profile-image">
+                    <img src="./images/carol.png" alt="Carol Zhang" class="profile-photo">
+                    <p class="profile-status">CS Master's Student @ UC San Diego'25</p>
+                </div>
                 <div class="profile-text">
-                    <br>
-
                     <p>Hi, I'm Carol Zhang. I'm currently a Computer Science Master student at the University
                         of California, San Diego (UCSD).
                     </p>
-
 
                     <p>
                         My main research interests focus on <strong>AI for Social Good</strong> and
@@ -44,11 +58,11 @@
                         at CHI’25.
                     </p>
 
-
-                    <p class="collaboration-text">
+                    <p>
                         I am happy to collaborate or just chat about research, my email is
                         <a href="mailto:qiz065@ucsd.edu">qiz065@ucsd.edu</a>.
                     </p>
+
                     <div class="research-tags">
                         <span class="tag">🤝 AI for Social Good</span>
                         <span class="tag">👥 Human-AI Interaction</span>
@@ -58,310 +72,183 @@
                         <span class="tag">🗺️ World Model</span>
                     </div>
 
-                    <!-- <p>I obtained my Bachelor's degree in Computer Science and Technology from the School of Information
-                        Engineering at <a href="https://english.cjlu.edu.cn/">China Jiliang University (CJLU)</a> and
-                        another degree in Computer and Information Science at <a href="https://www.aut.ac.nz/">Auckland
-                            University of Technology (AUT)</a>, advised by Dr. Lin Xiang and Dr. Haijun Tao.</p> -->
-                </div>
-                <div class="profile-image">
-
-                    <img src="./images/carol.png" alt="Carol Zhang" class="profile-photo">
-                    <br>
-                    <!-- 加粗 -->
-                    <p> <strong>CS Master's Student @ UC San Diego'25 </strong></p>
-                    <br>
-                    <div class="social-links"
-                        style="font-size: 24px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: center;">
-                        <a href="./cv.html" title="CV"
-                            style="color: #333; text-decoration: none; display: flex; align-items: center;">
-                            <i class="fas fa-file-alt" style="margin-right: 4px;"></i>
-                            <span style="font-size:14px;"></span>
-                        </a>
-                        <a href="https://github.com/Carolzhangzz" title="Github"
-                            style="color: #333; text-decoration: none;">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao"
-                            title="Google Scholar" style="color: #4285f4; text-decoration: none;">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <a href="https://twitter.com/Carol_Zhang1027" title="X"
-                            style="color: #000; text-decoration: none;">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/qinshiz/" title="LinkedIn"
-                            style="color: #0077B5; text-decoration: none;">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://t.me/carolzhangzz" title="Telegram"
-                            style="color: #0088cc; text-decoration: none;">
-                            <i class="fab fa-telegram-plane"></i>
-                        </a>
-                        <!-- <a href="https://www.xiaohongshu.com/user/profile/5fb856f80000000001001f7b" title="Xiaohongshu"
-                            style="display: inline-flex; align-items: center; text-decoration: none;">
-                            <img src="./images/xiaohongshu.svg" alt="Xiaohongshu"
-                                style="width: 20px; height: 20px; border-radius: 4px;">
-                        </a> -->
+                    <div class="social-links-text">
+                        <a href="https://twitter.com/Carol_Zhang1027">Twitter</a> / 
+                        <a href="./cv.html">CV</a> / 
+                        <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao">Google Scholar</a> / 
+                        <a href="https://github.com/Carolzhangzz">Github</a> / 
+                        <a href="https://www.linkedin.com/in/qinshiz/">LinkedIn</a> / 
+                        <a href="mailto:qiz065@ucsd.edu">Email</a>
                     </div>
 
-                    <!-- PhD Resources Toggle Button -->
                     <div class="phd-resources-toggle">
                         <button id="resources-toggle-btn" class="resources-btn">
-                            <i class="fas fa-book-reader"></i>
-                            PhD Resources
-                            <i class="fas fa-chevron-down" id="chevron-icon"></i>
+                            PhD Resources <i class="fas fa-chevron-down"></i>
                         </button>
                     </div>
 
-                    <!-- PhD Resources Dropdown -->
                     <div id="resources-dropdown" class="resources-dropdown hidden">
                         <div class="resources-compact">
                             <div class="resource-section">
-                                <h4><i class="fas fa-microscope"></i> Meta-Research</h4>
+                                <h4>Meta-Research</h4>
                                 <a href="https://metrics.stanford.edu/" target="_blank">METRICS (Stanford)</a>
-                                <a href="https://www.cos.io/communities/metascience" target="_blank">Metascience
-                                    Registry</a>
+                                <a href="https://www.cos.io/communities/metascience" target="_blank">Metascience Registry</a>
                                 <a href="http://metaresearch.nl/" target="_blank">Tilburg Meta-Research</a>
                                 <a href="https://www.bitss.org/" target="_blank">BITSS (Berkeley)</a>
-                                <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2005468"
-                                    target="_blank">Why Meta-Research Matters</a>
                             </div>
                             <div class="resource-section">
-                                <h4><i class="fas fa-brain"></i> Metacognition</h4>
-                                <a href="https://tll.mit.edu/teaching-resources/how-people-learn/metacognition/"
-                                    target="_blank">MIT Metacognition</a>
-                                <a href="https://www.sciencedirect.com/topics/neuroscience/metacognition"
-                                    target="_blank">ScienceDirect Overview</a>
+                                <h4>Metacognition</h4>
+                                <a href="https://tll.mit.edu/teaching-resources/how-people-learn/metacognition/" target="_blank">MIT Metacognition</a>
+                                <a href="https://www.sciencedirect.com/topics/neuroscience/metacognition" target="_blank">ScienceDirect Overview</a>
                                 <a href="https://link.springer.com/journal/11409" target="_blank">Springer Journal</a>
                             </div>
                             <div class="resource-section">
-                                <h4><i class="fas fa-book-open"></i> More Readings</h4>
-                                <a href="https://en.wikipedia.org/wiki/Metascience" target="_blank">Metascience
-                                    (Wiki)</a>
-                                <a href="https://www.science.org/topic/science-of-science" target="_blank">Science of
-                                    Science</a>
+                                <h4>Readings</h4>
+                                <a href="https://en.wikipedia.org/wiki/Metascience" target="_blank">Metascience (Wiki)</a>
+                                <a href="https://www.science.org/topic/science-of-science" target="_blank">Science of Science</a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="cta-buttons">
-                        <!-- <a href="mailto:qiz065@ucsd.edu" class="btn btn-primary">Email</a>
-                        <a href="#" class="btn btn-secondary">Blog</a>
-                        <a href="./cv.html" class="btn btn-tertiary">CV</a> -->
                     </div>
                 </div>
             </div>
         </section>
-        <section id="publications">
-            <h2>Featured Publications</h2>
 
-            <p>Note: * indicates equal contribution; † indicates the corresponding author.</p>
-            <br>
+        <section id="publications">
+            <h2>Papers</h2>
             <div class="publication-container">
                 <div class="publication-item">
-                    <div class="publication-content">
-                        <div class="publication-image">
-                            <img src="./images/FD.png" alt="FD Publication">
-                        </div>
-                        <div class="publication-info">
-                            <h3>Frontend Diffusion:
-                                Empowering Self-Representation of Researchers and
-                                Designers with Multi-agent System</h3>
-                            <p class="authors"> Zijian Ding, <strong>Qinshi Zhang</strong>, Mohan Chi, Ziyi Wang</p>
-                            <p class="venue">IEEE Symposium on Visual Languages and Human-Centric Computing 2025</p>
-                            <!-- <p class="venue">In preparation for 
-                                    href="https://chi2024.acm.org/for-authors/late-breaking-work/">C&C 2025</a></p> -->
-                            <div class="publication-links">
-                                <a href="https://x.com/jasonzding/status/1814046922874724767" class="btn btn-sm"><i
-                                        class="fas fa-video"></i> Video</a>
-                                <a href="./PDF/VLHCC25_FD.pdf" class="btn btn-sm"><i class="fas fa-file-pdf"></i>
-                                    PDF</a>
-                                <a href="https://github.com/Carolzhangzz/frontendiffusion" class="btn btn-sm"><i
-                                        class="fas fa-code"></i> Code <span class="star-count">★</span></a>
-                            </div>
-                            <div class="publication-extra">
-                                <a href="#" class="btn btn-sm bibtex-toggle"><i class="fas fa-book"></i> BibTeX</a>
-                            </div>
-                        </div>
+                    <div class="pub-date">2025 Aug</div>
+                    <div class="publication-image">
+                        <img src="./images/FD.png" alt="FD Publication">
                     </div>
-                    <div class="bibtex-content" style="display: none;">
-                        <pre>
-@article{zhang2024frontend,
-    title={Frontend Diffusion:
-Empowering Self-Representation of Researchers and
-Designers with Multi-agent System},
+                    <div class="pub-info">
+                        <h3><a href="./PDF/VLHCC25_FD.pdf">Frontend Diffusion: Empowering Self-Representation of Researchers and Designers with Multi-agent System</a></h3>
+                        <p class="authors">Zijian Ding, <strong>Qinshi Zhang</strong>, Mohan Chi, Ziyi Wang</p>
+                        <p class="venue">IEEE Symposium on Visual Languages and Human-Centric Computing 2025</p>
+                        <div class="publication-links">
+                            <a href="https://x.com/jasonzding/status/1814046922874724767">Video</a>
+                            <a href="./PDF/VLHCC25_FD.pdf">PDF</a>
+                            <a href="https://github.com/Carolzhangzz/frontendiffusion">Code</a>
+                            <button class="bibtex-toggle">BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{zhang2024frontend,
+    title={Frontend Diffusion: Empowering Self-Representation of Researchers and Designers with Multi-agent System},
     author={Ding, Zijian, Zhang, Qinshi, Chi, Mohan, WANG, Ziyi},
     journal={arXiv e-prints},
     pages={arXiv--2408},
     year={2024}
-}
-                        </pre>
+}</pre>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="publication-container">
                 <div class="publication-item">
-                    <div class="publication-content">
-                        <div class="publication-image">
-                            <img src="./images/Ecoecho.png" alt="EcoEcho Publication">
-                        </div>
-                        <div class="publication-info">
-                            <h3>Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show
-                                Consequences to Raise Sustainability Awareness</h3>
-                            <p class="authors"><strong>Qinshi Zhang</strong>, Ruoyu Wen, Zijian Ding, Latisha Besariani
-                                Hendra, Ray LC†</p>
-                            <p class="venue">CHI Conference on Human Factors in Computing Systems 2025</p>
-                            <div class="publication-links">
-                                <a href="https://ecoecho.duckdns.org/" class="btn btn-sm"><i class="fas fa-play"></i>
-                                    Demo</a>
-                                <a href="https://dl.acm.org/doi/10.1145/3706598.3713661" class="btn btn-sm"><i
-                                        class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="https://github.com/Carolzhangzz/Eco_Echo" class="btn btn-sm"><i
-                                        class="fas fa-code"></i> Code <span class="star-count">★</span></a>
-                                <!-- <a href="video/pn3281-talk-video.mp4" class="btn btn-sm">
-                                    <i class="fas fa-video"></i> Video
-                                </a> -->
-                            </div>
-                            <div class="publication-extra">
-                                <a href="#" class="btn btn-sm bibtex-toggle"><i class="fas fa-book"></i> BibTeX</a>
-                            </div>
-
-                        </div>
+                    <div class="pub-date">2025 Jan</div>
+                    <div class="publication-image">
+                        <img src="./images/Ecoecho.png" alt="EcoEcho Publication">
                     </div>
-                    <div class="bibtex-content" style="display: none;">
-                        <pre>
-@article{zhang2024can,
+                    <div class="pub-info">
+                        <h3><a href="https://dl.acm.org/doi/10.1145/3706598.3713661">Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise Sustainability Awareness</a></h3>
+                        <p class="authors"><strong>Qinshi Zhang</strong>, Ruoyu Wen, Zijian Ding, Latisha Besariani Hendra, Ray LC†</p>
+                        <p class="venue">CHI Conference on Human Factors in Computing Systems 2025</p>
+                        <div class="publication-links">
+                            <a href="https://ecoecho.duckdns.org/">Demo</a>
+                            <a href="https://dl.acm.org/doi/10.1145/3706598.3713661">PDF</a>
+                            <a href="https://github.com/Carolzhangzz/Eco_Echo">Code</a>
+                            <button class="bibtex-toggle">BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@article{zhang2024can,
     title={Can AI Prompt Humans? Multimodal Agents Prompt Players' Game Actions and Show Consequences to Raise Sustainability Awareness},
     author={Zhang, Qinshi and Wen, Ruoyu and Ding, Zijian and Hendra, Latisha Besariani and LC, Ray},
     journal={arXiv preprint arXiv:2409.08486},
     year={2024}
-}
-                </pre>
+}</pre>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="publication-container">
                 <div class="publication-item">
-                    <div class="publication-content">
-                        <div class="publication-image">
-                            <img src="./images/Etergram.png" alt="Etergram Publication">
-                        </div>
-                        <div class="publication-info">
-                            <h3>Eternagram: Probing Player Attitudes in Alternate Climate Scenarios Through a
-                                ChatGPT-Driven Text Adventure</h3>
-                            <p class="authors">Suifang Zhou*, Latisha Besariani Hendra*, <strong>Qinshi Zhang*</strong>,
-                                Jussi Holopainen, Ray LC†</p>
-                            <p class="venue">CHI Conference on Human Factors in Computing Systems 2024</p>
-                            <div class="publication-links">
-                                <a href="https://recfro.github.io/eternagram/" class="btn btn-sm">
-                                    <i class="fas fa-project-diagram"></i> Project
-                                </a>
-                                <a href="https://www.youtube.com/watch?v=lvC-KcD2qRE&t=6s" class="btn btn-sm">
-                                    <i class="fas fa-video"></i> Video
-                                </a>
-                                <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850" class="btn btn-sm"><i
-                                        class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="https://github.com/Carolzhangzz/Eternagram_" class="btn btn-sm"><i
-                                        class="fas fa-code"></i> Code <span class="star-count">★</span></a>
-                            </div>
-                            <div class="publication-extra">
-                                <a href="#" class="btn btn-sm bibtex-toggle"><i class="fas fa-book"></i> BibTeX</a>
-                            </div>
-                        </div>
+                    <div class="pub-date">2024 May</div>
+                    <div class="publication-image">
+                        <img src="./images/Etergram.png" alt="Etergram Publication">
                     </div>
-                    <div class="bibtex-content" style="display: none;">
-                        <pre>
-@inproceedings{zhou2024eternagram,
+                    <div class="pub-info">
+                        <h3><a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850">Eternagram: Probing Player Attitudes in Alternate Climate Scenarios Through a ChatGPT-Driven Text Adventure</a></h3>
+                        <p class="authors">Suifang Zhou*, Latisha Besariani Hendra*, <strong>Qinshi Zhang*</strong>, Jussi Holopainen, Ray LC†</p>
+                        <p class="venue">CHI Conference on Human Factors in Computing Systems 2024</p>
+                        <div class="publication-links">
+                            <a href="https://recfro.github.io/eternagram/">Project</a>
+                            <a href="https://www.youtube.com/watch?v=lvC-KcD2qRE&t=6s">Video</a>
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850">PDF</a>
+                            <a href="https://github.com/Carolzhangzz/Eternagram_">Code</a>
+                            <button class="bibtex-toggle">BibTeX</button>
+                        </div>
+                        <div class="bibtex-content" style="display: none;">
+                            <pre>@inproceedings{zhou2024eternagram,
     title={Eternagram: Probing Player Attitudes Towards Climate Change Using a ChatGPT-driven Text-based Adventure},
     author={Zhou, Suifang and Hendra, Latisha Besariani and Zhang, Qinshi and Holopainen, Jussi and LC, RAY},
     booktitle={Proceedings of the CHI Conference on Human Factors in Computing Systems},
     pages={1--23},
     year={2024}
-}
-                        </pre>
+}</pre>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
 
             <h2>Projects</h2>
-            <div class="publication-item">
-                <div class="publication-content">
-                    <div class="publication-image">
-                        <img src="./images/jupyter.png" alt="jupyter" class="scaled-image">
-                    </div>
-                    <div class="publication-info">
-                        <h3>Classifying Applications, Structure,
-                            and Data Transformations in Jupyter
-                            Notebooks</h3>
-                        <p class="venue">Jacob Yim*, Qinshi Zhang*</p>
-                        <p class="venue">An Exploratory Study</p>
-                        <div class="publication-links">
-                            <a href="./PDF/notebooks.pdf" class="btn btn-sm">
-                                <i class="fas fa-link"></i> PDF
-                            </a>
-                            <a href="./PDF/CSE 291B00 Project Presentation.pdf" class="btn btn-sm" target="_blank">
-                                <i class="fas fa-slideshare"></i> Slides
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="publication-item">
-                <div class="publication-content">
-                    <div class="publication-image">
-                        <img src="./images/multimodal-news.png" alt="Multimodal News RecSys" class="scaled-image">
-                    </div>
-                    <div class="publication-info">
-                        <h3>Multimodal News Recommendation</h3>
-                        <p class="venue">
-                            Multimodal News Recommendation
-                        </p>
-                        <p class="venue">
-                            <strong>Focus:</strong> benchmarking MMGCN vs. content-only (text + price)<br>
-                            with partial use of image features (CLIP) exploring fusion strategies for cold-start.
-                        </p>
-                        <div class="publication-links">
-                            <a href="https://github.com/Carolzhangzz/Multimodal-News-RecSys" class="btn btn-sm">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://amazon-reviews-2023.github.io/" class="btn btn-sm">
-                                <i class="fas fa-database"></i> Dataset (Amazon Reviews'23)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="publication-container">
                 <div class="publication-item">
-                    <div class="publication-content">
-                        <div class="publication-image">
-                            <img src="./images/d4sd.png" alt="D4SD 2024 Publication" class="scaled-image">
+                    <div class="pub-date">2024 Dec</div>
+                    <div class="publication-image">
+                        <img src="./images/jupyter.png" alt="jupyter">
+                    </div>
+                    <div class="pub-info">
+                        <h3><a href="./PDF/notebooks.pdf">Classifying Applications, Structure, and Data Transformations in Jupyter Notebooks</a></h3>
+                        <p class="authors">Jacob Yim*, Qinshi Zhang*</p>
+                        <p class="venue">An Exploratory Study</p>
+                        <div class="publication-links">
+                            <a href="./PDF/notebooks.pdf">PDF</a>
+                            <a href="./PDF/CSE 291B00 Project Presentation.pdf">Slides</a>
                         </div>
-                        <div class="publication-info">
-                            <h3>Design for San Diego 2024</h3>
-                            <p class="venue">Served as Web Development Lead</p>
+                    </div>
+                </div>
 
-                            <div class="publication-links">
-                                <a href="https://d4sd2024.ucsd.edu/" class="btn btn-sm btn-outline-secondary">
-                                    <i class="fas fa-users"></i> Our Website
-                                </a>
-                                <a href="https://wdc2024.org/design-policy-conference-speakers-tracks/"
-                                    class="btn btn-sm btn-outline-secondary">
-                                    <i class="fas fa-users"></i> Official Program Homepage
-                                </a>
-                            </div>
+                <div class="publication-item">
+                    <div class="pub-date">2024 Nov</div>
+                    <div class="publication-image">
+                        <img src="./images/multimodal-news.png" alt="Multimodal News RecSys">
+                    </div>
+                    <div class="pub-info">
+                        <h3><a href="https://github.com/Carolzhangzz/Multimodal-News-RecSys">Multimodal News Recommendation</a></h3>
+                        <p class="authors">Qinshi Zhang, et al.</p>
+                        <p class="venue">Focus: benchmarking MMGCN vs. content-only (text + price) with partial use of image features (CLIP) exploring fusion strategies for cold-start.</p>
+                        <div class="publication-links">
+                            <a href="https://github.com/Carolzhangzz/Multimodal-News-RecSys">Code</a>
+                            <a href="https://amazon-reviews-2023.github.io/">Dataset</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-date">2024 Jun</div>
+                    <div class="publication-image">
+                        <img src="./images/d4sd.png" alt="D4SD 2024 Publication">
+                    </div>
+                    <div class="pub-info">
+                        <h3><a href="https://d4sd2024.ucsd.edu/">Design for San Diego 2024</a></h3>
+                        <p class="authors">Qinshi Zhang (Web Development Lead)</p>
+                        <p class="venue">UCSD Design Lab Initiative</p>
+                        <div class="publication-links">
+                            <a href="https://d4sd2024.ucsd.edu/">Website</a>
+                            <a href="https://wdc2024.org/design-policy-conference-speakers-tracks/">Official Program</a>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
         </section>
-
-
 
         <section id="news">
             <h2>News</h2>
@@ -369,77 +256,61 @@ Designers with Multi-agent System},
                 <div class="news-item">
                     <span class="date">2025.09</span>
                     <div class="news-content">
-                        I will attend
-                        <a href="https://neurips.cc/Conferences/2025">NeurIPS'25</a>
-                        (Dec 2–7, San Diego Convention Center).
+                        I will attend <a href="https://neurips.cc/Conferences/2025">NeurIPS'25</a> (Dec 2–7, San Diego Convention Center).
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2025.08</span>
                     <div class="news-content">
-                        Our paper,
-                        <a href="./PDF/VLHCC25_FD.pdf">Frontend Diffusion</a>,
-                        has been accepted at IEEE VL/HCC 2025!
+                        Our paper, <a href="./PDF/VLHCC25_FD.pdf">Frontend Diffusion</a>, has been accepted at IEEE VL/HCC 2025!
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2025.01</span>
                     <div class="news-content">
-                        Our paper,
-                        <a href="https://dl.acm.org/doi/10.1145/3706598.3713661">Can AI Prompt Humans</a>,
-                        has been fully accepted at CHI 2025!
+                        Our paper, <a href="https://dl.acm.org/doi/10.1145/3706598.3713661">Can AI Prompt Humans</a>, has been fully accepted at CHI 2025!
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2024.10</span>
                     <div class="news-content">
-                        <p>Attending <a href="https://uist.acm.org/2024/">UIST'24</a>, See you in Pittsburgh !</p>
+                        Attending <a href="https://uist.acm.org/2024/">UIST'24</a>, See you in Pittsburgh !
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2024.09</span>
                     <div class="news-content">
-                        <p>Begin my MSCS program at <a href="https://ucsd.edu/">UCSD</a> this fall! See you in San
-                            Diego!</p>
+                        Begin my MSCS program at <a href="https://ucsd.edu/">UCSD</a> this fall! See you in San Diego!
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2024.06</span>
                     <div class="news-content">
-                        <p>
-                            Starting my internship at
-                            <a href="https://designlab.ucsd.edu/">UC San Diego Design Lab</a>
-                            this July. Excited to contribute to the
-                            <a href="https://wdc2024.org/design-policy-conference-speakers-tracks/">D4SD</a>
-                            2024 program!
-                        </p>
+                        Starting my internship at <a href="https://designlab.ucsd.edu/">UC San Diego Design Lab</a> this July. Excited to contribute to the <a href="https://wdc2024.org/design-policy-conference-speakers-tracks/">D4SD</a> 2024 program!
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2024.01</span>
                     <div class="news-content">
-                        <p>Serving as a Student Volunteer at <a href="https://chi2024.acm.org/">CHI 2024</a>! See you in
-                            Hawai'i!</p>
+                        Serving as a Student Volunteer at <a href="https://chi2024.acm.org/">CHI 2024</a>! See you in Hawai'i!
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2024.01</span>
                     <div class="news-content">
-                        <p>Our Paper <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850">Eternagram</a> has
-                            been accepted to <a href="https://chi2024.acm.org/">CHI 2024!</a>.</p>
+                        Our Paper <a href="https://dl.acm.org/doi/abs/10.1145/3613904.3642850">Eternagram</a> has been accepted to <a href="https://chi2024.acm.org/">CHI 2024!</a>.
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2023.11</span>
                     <div class="news-content">
-                        <p>Served as a Volunteer at <a href="https://chchi2023.icachi.org/">Chinese CHI 2023</a>.</p>
+                        Served as a Volunteer at <a href="https://chchi2023.icachi.org/">Chinese CHI 2023</a>.
                     </div>
                 </div>
                 <div class="news-item">
                     <span class="date">2023.07</span>
                     <div class="news-content">
-                        <p>Starting a research-based program at <a href="https://www.uci.edu/">UC Irvine</a> this
-                            September!</p>
+                        Starting a research-based program at <a href="https://www.uci.edu/">UC Irvine</a> this September!
                     </div>
                 </div>
             </div>
@@ -450,13 +321,12 @@ Designers with Multi-agent System},
     <footer>
         <p>Designed and built by Qinshi (Carol) Zhang <i class="fas fa-heart"></i>.</p>
         <div class="footer-links">
-            <a href="./cv.html"><i class="far fa-file-alt"></i></a>
-            <a href="https://github.com/Carolzhangzz"><i class="fab fa-github"></i></a>
-            <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao"><i
-                    class="fas fa-graduation-cap"></i></a>
-            <a href="https://x.com/Carol_Zhang1027"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/qinshiz/"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:qiz065@ucsd.edu"><i class="fas fa-envelope"></i></a>
+            <a href="./cv.html" title="CV"><i class="fas fa-file-alt"></i></a>
+            <a href="https://github.com/Carolzhangzz" title="Github"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=Zo0HnLwAAAAJ&hl=zh-CN&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://twitter.com/Carol_Zhang1027" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/qinshiz/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:qiz065@ucsd.edu" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
     <script src="style.js"></script>

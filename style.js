@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const bibtexContent = this.closest(".publication-item").querySelector(".bibtex-content");
       if (bibtexContent.style.display === "none" || bibtexContent.style.display === "") {
         bibtexContent.style.display = "block";
-        this.textContent = "Hide BibTeX";
+        this.innerHTML = '<i class="fas fa-times"></i> Hide BibTeX';
       } else {
         bibtexContent.style.display = "none";
-        this.textContent = "Show BibTeX";
+        this.innerHTML = '<i class="fas fa-quote-right"></i> BibTeX';
       }
     });
   });
