@@ -17,26 +17,30 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Qinshi (Carol) Zhang</a>
-            <div class="nav-links">
-                <a href="#about">Home</a>
-                <a href="#publications">Papers</a>
-                <a href="#news">News</a>
-                <a href="./blog.html">Blog</a>
-                <a href="./cv.html">CV</a>
-            </div>
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="main-name">Qinshi (Carol) Zhang</h1>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#publications">Papers</a>
+                    <a href="index.html#news">News</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./cv.html">CV</a>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </header>
+
     <main>
         <section id="about">
-            <div class="profile-content">
-                <div class="profile-image">
+            <div class="profile-layout">
+                <div class="profile-sidebar">
                     <img src="./images/carol.png" alt="Carol Zhang" class="profile-photo">
                     <p class="profile-status">CS Master's Student @ UC San Diego'25</p>
                 </div>
-                <div class="profile-text">
+                
+                <div class="profile-content-text">
                     <p>Hi, I'm Carol Zhang. I'm currently a Computer Science Master student at the University
                         of California, San Diego (UCSD).
                     </p>
@@ -226,7 +230,7 @@
                     <div class="pub-info">
                         <h3><a href="https://github.com/Carolzhangzz/Multimodal-News-RecSys">Multimodal News Recommendation</a></h3>
                         <p class="authors">Qinshi Zhang, et al.</p>
-                        <p class="venue">Focus: benchmarking MMGCN vs. content-only (text + price) with partial use of image features (CLIP) exploring fusion strategies for cold-start.</p>
+                        <p class="venue">Focus: MMGCN vs. Content-only strategies</p>
                         <div class="publication-links">
                             <a href="https://github.com/Carolzhangzz/Multimodal-News-RecSys">Code</a>
                             <a href="https://amazon-reviews-2023.github.io/">Dataset</a>
