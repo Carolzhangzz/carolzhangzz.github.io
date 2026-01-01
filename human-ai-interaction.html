@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human–AI Interaction as a Socio-Technical Process | Qinshi (Carol) Zhang</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="main-name">Qinshi (Carol) Zhang</h1>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#publications">Papers</a>
+                    <a href="index.html#news">News</a>
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="cv.html">CV</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article class="blog-post">
+            <header class="post-header">
+                <h1 class="post-title">Human–AI Interaction as a Socio-Technical Process</h1>
+                <p class="post-meta">January 2, 2026 | Research Vision</p>
+                <p class="post-subtitle">How human judgment, values, and cognitive biases become embedded into AI systems across their entire lifecycle.</p>
+            </header>
+
+            <hr class="post-divider">
+
+            <div class="post-content">
+                <p>Human–AI Interaction, in my view, is not primarily about interfaces, prompts, or surface-level usability.</p>
+                <p>It is about <strong>how human judgment, values, and cognitive biases become embedded into AI systems across their entire lifecycle</strong>.</p>
+                <p>AI systems do not fail—or succeed—in isolation. They behave as a consequence of how humans define problems, design workflows, construct data, evaluate outputs, and maintain oversight over time.</p>
+                <p>Seen this way, Human–AI Interaction is fundamentally a <strong>socio-technical process</strong>, not a UI problem.</p>
+
+                <h2>Bias Is Not an Exception — It Is a Lifecycle Property</h2>
+                <p>Bias does not suddenly appear at deployment. It emerges gradually, often invisibly, at <strong>every stage of system design</strong>.</p>
+
+                <h3>1. Use Case Definition</h3>
+                <p>Bias begins with intent. Humans decide:</p>
+                <ul>
+                    <li>Which tasks should be automated</li>
+                    <li>What counts as success or failure</li>
+                    <li>Which errors are acceptable—and which are not</li>
+                </ul>
+                <p>These early decisions already encode values and trade-offs, long before models or data are involved.</p>
+
+                <h3>2. Design: Allocation of Control</h3>
+                <p>Design determines <em>who is in charge, when, and why</em>. Key questions include:</p>
+                <ul>
+                    <li>When does the AI act autonomously, and when must humans intervene?</li>
+                    <li>Can actions be interrupted, reversed, or corrected?</li>
+                    <li>Are users supported in understanding and recovering from system failure?</li>
+                </ul>
+                <p>Design choices quietly shape power, responsibility, and trust—often more than model architecture ever will.</p>
+
+                <h3>3. Data: Human Judgment at Scale</h3>
+                <p>Data is not a mirror of reality; it is a record of <strong>human decisions</strong>. Human bias enters through:</p>
+                <ul>
+                    <li>What data is collected</li>
+                    <li>How it is labeled</li>
+                    <li>Which behaviors are treated as “normal” or “desirable”</li>
+                </ul>
+                <p>As Dan Russell warns in his discussion of synthetic users in UX research, large-scale simulated data may be efficient, but it often fails to capture <strong>what people actually do</strong>, especially subtle signals like hesitation, frustration, or off-script behavior [1]. Synthetic users are useful—but only when we understand <strong>what they systematically miss</strong>.</p>
+
+                <h3>4. Models: Alignment Reflects Human Cognition</h3>
+                <p>Recent discussions around hallucination and overconfidence suggest that many failures are not purely algorithmic.</p>
+                <p>OpenAI has noted that standard training and evaluation pipelines often reward confident guessing rather than explicit uncertainty, creating systems that optimize for <em>plausibility</em> over <em>truthfulness</em> [5].</p>
+                <p>At the same time, Stanford-led work on <em>typicality bias</em> shows that post-training alignment amplifies annotators’ preference for familiar or “typical” responses, leading to <strong>mode collapse</strong>—a reduction in diversity that reflects human cognitive bias rather than model limitation [6].</p>
+                <p>In other words, models do not invent these tendencies. They <strong>inherit them from us</strong>.</p>
+
+                <h3>5. Testing: Measuring the Wrong Things</h3>
+                <p>Evaluation frequently focuses on accuracy under ideal conditions. But human-centered evaluation asks different questions:</p>
+                <ul>
+                    <li>How does the system behave under uncertainty or distribution shift?</li>
+                    <li>Does it fail gracefully—or hallucinate confidently?</li>
+                    <li>Can humans understand what went wrong and recover?</li>
+                </ul>
+                <p>As Werner Geyer reflects in his account of human-centered and responsible AI at IBM Research, productivity gains vanish when users do not trust systems or cannot meaningfully integrate them into real workflows [2].</p>
+
+                <h3>6. Monitoring: Bias Does Not End at Deployment</h3>
+                <p>Bias continues to evolve after launch. Long-term oversight must consider:</p>
+                <ul>
+                    <li>Behavioral drift</li>
+                    <li>Trust erosion</li>
+                    <li>Changes in human decision-making caused by AI assistance itself</li>
+                </ul>
+                <p>Monitoring is not just technical—it is about observing how <strong>humans adapt to AI</strong>, often in unintended ways.</p>
+
+                <h2>Beyond Prediction: Rethinking How Machines Understand the World</h2>
+                <p>Recent discussions around self-supervised learning from natural videos suggest a broader shift in how we think about machine perception. Rather than predicting outcomes from static inputs, these approaches aim to capture underlying structure in the physical world—learning something closer to intuitive physics [3][4].</p>
+                <p>This matters not only for robotics or autonomous systems, but for Human–AI Interaction more broadly: systems that understand structure, uncertainty, and causality may support <strong>more reliable human decision-making</strong>, especially in complex environments.</p>
+
+                <h2>A Personal Research Perspective</h2>
+                <p>My research starts from a simple premise:</p>
+                <blockquote>
+                    <p>AI systems cannot operate meaningfully without human intent—but intent is heterogeneous, contextual, and value-laden.</p>
+                </blockquote>
+                <p>Effective AI systems should therefore not aim for full autonomy, but for <strong>structured human participation</strong> throughout the system lifecycle. Rather than optimizing isolated components (models, prompts, or interfaces), I study Human–AI systems as <strong>end-to-end socio-technical processes</strong>, where bias, trust, and control emerge from interactions between people, data, and machines.</p>
+                <p>The goal is not just better performance, but:</p>
+                <ul>
+                    <li>Interpretability under uncertainty</li>
+                    <li>Robustness in real-world use</li>
+                    <li>AI systems that amplify human judgment rather than replace it</li>
+                </ul>
+
+                <h2>Closing Thought</h2>
+                <p>Bias is not a bug introduced at the end of the pipeline. It is a consequence of how humans and machines are coupled over time. Understanding Human–AI Interaction ultimately requires understanding ourselves—our assumptions, incentives, and cognitive shortcuts—and deciding deliberately how they should shape intelligent systems.</p>
+
+                <h2 id="references">References & Sources</h2>
+                <div class="references-list">
+                    <p>[1] Russell, D. <em>The Risks of Synthetic Users in UX Research.</em> ACM Interactions. <a href="https://interactions.acm.org/">https://interactions.acm.org/</a></p>
+                    <p>[2] Geyer, W. <em>Looking Back, Moving Forward: Human-Centered and Responsible AI.</em> LinkedIn post, IBM Research. <a href="https://www.linkedin.com/">https://www.linkedin.com/</a></p>
+                    <p>[3] Zhuang, X. <em>Commentary on self-supervised pretraining from natural videos.</em> X (Twitter).</p>
+                    <p>[4] Singh, A. <em>Rethinking How Machines Perceive the World.</em> X (Twitter).</p>
+                    <p>[5] OpenAI. <em>Why Language Models Hallucinate.</em> OpenAI Blog, 2024.</p>
+                    <p>[6] Zhang, J., Yu, S., Chong, D., Sicilia, A., Tomz, M. R., Manning, C. D., & Shi, W. <em>Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity.</em> arXiv:2510.01171v3, 2025.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <a href="blog.html" style="color: var(--text-muted); text-decoration: none; font-size: 1.1rem;">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>© Qinshi (Carol) Zhang | Designed and built with <i class="fas fa-heart"></i></p>
+    </footer>
+</body>
+</html>

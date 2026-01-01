@@ -477,6 +477,16 @@ a:hover {
   font-size: 1.15rem;
 }
 
+.references-list {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.references-list p {
+  margin-bottom: 1rem;
+}
+
 .post-content strong {
   color: var(--primary-color);
 }
