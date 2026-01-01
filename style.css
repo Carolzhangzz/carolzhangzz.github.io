@@ -430,3 +430,29 @@ footer p {
     text-align: center;
   }
 }
+
+.research-curiosity {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.research-curiosity summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-main);
+    list-style: none;
+}
+
+.research-curiosity summary::marker {
+    display: none;
+}
+
+.research-curiosity summary::after {
+    content: " ▾";
+    font-size: 0.8rem;
+}
+
+.research-curiosity[open] summary::after {
+    content: " ▴";
+}
