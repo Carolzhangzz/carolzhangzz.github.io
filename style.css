@@ -73,7 +73,8 @@ main {
   transition: border-color 0.2s ease;
 }
 
-.main-nav .nav-links a:hover {
+.main-nav .nav-links a:hover,
+.main-nav .nav-links a.active {
   border-bottom: 1px solid var(--primary-color);
 }
 
