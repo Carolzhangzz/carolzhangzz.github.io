@@ -349,6 +349,138 @@ a:hover {
   border-radius: 2px;
 }
 
+/* ========== Blog List Styles ========== */
+.blog-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.blog-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+.blog-card-header {
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-title {
+  font-size: 1.8rem;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.blog-card-meta {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.blog-card-excerpt {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+.blog-card-more {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  color: #3b5998;
+  font-weight: 500;
+}
+
+/* ========== Blog Post Styles ========== */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.post-meta {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.post-subtitle {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.post-divider {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+.post-content h2 {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  border-bottom: none;
+}
+
+.post-content h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.post-content blockquote {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  border-left: 3px solid var(--primary-color);
+  background: #f9f9f9;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.post-content ul, .post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.8rem;
+  font-size: 1.15rem;
+}
+
+.post-content strong {
+  color: var(--primary-color);
+}
+
 /* ========== Footer ========== */
 footer {
   margin-top: 5rem;
