@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Order Emerges from Noise | Qinshi (Carol) Zhang</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="main-name">Qinshi (Carol) Zhang</h1>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#publications">Papers</a>
+                    <a href="index.html#news">News</a>
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="cv.html">CV</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article class="blog-post">
+            <header class="post-header">
+                <h1 class="post-title">When Order Emerges from Noise: What Spin-Locking Teaches Us About Human–AI Systems</h1>
+                <p class="post-meta">January 1, 2026 | Systems & Theory</p>
+                <p class="post-subtitle">What if bias, hallucination, and mode collapse are emergent properties of complex systems, rather than isolated errors?</p>
+            </header>
+
+            <hr class="post-divider">
+
+            <div class="post-content">
+                <p>In many areas of AI research, we often talk about <em>bias</em>, <em>hallucination</em>, or <em>mode collapse</em> as if they were local failures—bugs in data, flaws in algorithms, or mistakes in optimization. But what if these phenomena are better understood as <strong>emergent properties of complex systems</strong>, rather than isolated errors?</p>
+                <p>Insights from physics—particularly the <strong>spin-locking effect</strong>—offer a useful lens for rethinking how structure, stability, and bias emerge from large-scale interactions, and why purely local fixes often fall short.</p>
+
+                <h2>From Random Motion to Stable Structure</h2>
+                <p>In statistical physics, <strong>spin-locking</strong> refers to a phenomenon where systems composed of many randomly interacting elements nevertheless exhibit <strong>stable, ordered macroscopic behavior</strong>.</p>
+                <p>Recent work on the <em>Brownian spin-locking effect</em> shows that even when particles undergo stochastic motion in disordered media, repeated interactions can produce <strong>persistent correlations</strong> between spin and motion direction [1]. What is striking is that this order is not explicitly imposed—it <strong>emerges through averaging, coupling, and repetition</strong>.</p>
+                <p>At the microscopic level, the system is noisy and unpredictable. At the macroscopic level, however, the noise cancels out, leaving behind a surprisingly simple and stable structure.</p>
+                <p>This idea should sound familiar to anyone working with large-scale AI systems.</p>
+
+                <h2>AI Systems as Statistical Machines</h2>
+                <p>Modern AI—especially large language models—operates in a regime that is deeply statistical. Individual token predictions are uncertain; single interactions are noisy. Yet over massive datasets and repeated training cycles, models converge toward <strong>highly stable behavioral patterns</strong>.</p>
+                <p>This stability is often celebrated as robustness—but it also explains why <strong>biases can be stubbornly persistent</strong>.</p>
+                <p>Recent analyses of post-training alignment show that diversity loss and mode collapse are not solely algorithmic issues. Instead, they are strongly driven by <strong>typicality bias in human preference data</strong>, where annotators systematically favor familiar, conventional outputs [2]. Over time, training objectives amplify these preferences, locking models into narrow response modes.</p>
+                <p>In other words, alignment procedures do not merely shape behavior—they <strong>lock it</strong>.</p>
+
+                <h2>Bias Is Not a Bug—It’s a System Property</h2>
+                <p>This reframes a core misconception: bias is not something that only appears <em>after</em> model training, nor is it limited to datasets.</p>
+                <p>Bias can emerge at <strong>every stage of the Human–AI pipeline</strong>:</p>
+                <ul>
+                    <li><strong>Use cases</strong> define which outcomes matter—and which failures are tolerated.</li>
+                    <li><strong>Design choices</strong> allocate control between humans and machines.</li>
+                    <li><strong>Data collection and labeling</strong> encode human values long before training begins.</li>
+                    <li><strong>Pre-training and post-training</strong> reinforce statistical regularities.</li>
+                    <li><strong>Evaluation metrics</strong> reward confidence over calibrated uncertainty.</li>
+                    <li><strong>Monitoring practices</strong> determine which deviations are noticed—and which are ignored.</li>
+                </ul>
+                <p>Seen through the lens of spin-locking, these stages act as repeated interactions that gradually <strong>stabilize particular system behaviors</strong>, even when those behaviors are undesirable.</p>
+
+                <h2>Hallucination and Overconfidence</h2>
+                <p>Recent discussions around hallucination point to a deeper misalignment: standard training and evaluation pipelines reward <em>guessing</em>, not <em>acknowledging uncertainty</em> [3]. Much like students trained on multiple-choice exams, language models learn that producing <em>some</em> answer is better than admitting ambiguity.</p>
+                <p>This is not a flaw of intelligence—it is a consequence of <strong>what the system is optimized to do</strong>. From this perspective, hallucination resembles an emergent artifact of statistical pressure, not a defect in reasoning capacity.</p>
+
+                <h2>Human–AI Interaction Is a Socio-Technical System</h2>
+                <p>This is why Human–AI Interaction cannot be reduced to UI design. It is a <strong>system-level problem</strong> spanning:</p>
+                <blockquote>
+                    <p>use case → design → data → model → test → monitoring</p>
+                </blockquote>
+                <p>Human involvement that is too strong leads to inefficiency; involvement that is too weak leads to loss of control. The challenge is not <em>whether</em> humans should be in the loop, but <strong>how participation is structured over time</strong>.</p>
+                <p>As researchers in human-centered AI have repeatedly shown, trust, adoption, and productivity depend less on raw model performance and more on whether systems align with human judgment, workflows, and values [4].</p>
+
+                <h2>Why This Matters for Research</h2>
+                <p>Spin-locking teaches us a humbling lesson: once a system’s macroscopic behavior stabilizes, changing it becomes difficult—not because we lack better algorithms, but because <strong>the structure itself resists change</strong>.</p>
+                <p>For AI research, this suggests a shift in focus:</p>
+                <ul>
+                    <li>from optimizing isolated components</li>
+                    <li>to understanding <strong>how long-term interaction patterns shape system behavior</strong></li>
+                </ul>
+                <p>True progress may come not from stronger models, but from <strong>rethinking how incentives, data, evaluation, and human participation interact over time</strong>.</p>
+
+                <h2>Closing Thought</h2>
+                <p>Order does not always signal understanding. Sometimes, it is simply what remains after uncertainty has been averaged away.</p>
+                <p>If we want AI systems that are not just stable, but <em>meaningfully aligned</em>, we must learn to see bias, confidence, and failure not as local anomalies—but as <strong>emergent properties of the systems we build</strong>.</p>
+
+                <h2 id="references">References</h2>
+                <div class="references-list">
+                    <p>[1] Zhang, X. et al. <em>Brownian Spin-Locking Effect</em>. arXiv:2412.00879, 2024. <a href="https://arxiv.org/abs/2412.00879">https://arxiv.org/abs/2412.00879</a></p>
+                    <p>[2] Zhang, J., Yu, S., Chong, D., Sicilia, A., Tomz, M., Manning, C., Shi, W. <em>Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity</em>. arXiv, 2025.</p>
+                    <p>[3] OpenAI. <em>Why Language Models Hallucinate</em>. OpenAI Research Blog, 2024.</p>
+                    <p>[4] Geyer, W. <em>Human-Centered and Responsible AI: Reflections from IBM Research</em>. LinkedIn, 2024.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <a href="blog.html" style="color: var(--text-muted); text-decoration: none; font-size: 1.1rem;">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </a>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>© Qinshi (Carol) Zhang | Designed and built with <i class="fas fa-heart"></i></p>
+    </footer>
+</body>
+</html>
