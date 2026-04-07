@@ -10,6 +10,41 @@
   --body-font: "EB Garamond", Garamond, "Times New Roman", serif;
 }
 
+/* ========== Geometric Background ========== */
+#geo-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ========== News Badge ========== */
+.news-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #e74c3c, #e67e22);
+  color: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 6px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 /* ========== Global Reset ========== */
 * {
   margin: 0;
