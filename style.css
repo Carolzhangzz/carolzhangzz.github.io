@@ -214,14 +214,18 @@ a:hover {
 }
 
 .publication-image {
-  flex: 0 0 120px;
+  flex: 0 0 160px;
   margin-top: 0.3rem;
 }
 
 .publication-image img {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
   border-radius: 2px;
   border: 1px solid var(--border-color);
+  display: block;
 }
 
 .pub-info h3 {
