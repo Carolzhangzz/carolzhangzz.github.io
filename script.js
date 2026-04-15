@@ -13,13 +13,13 @@
 
   // ===== Particle mesh (original style, black on white) =====
   const NODES = [];
-  const NODE_COUNT = 70;
-  const CONNECT_DIST = 160;
-  const MOUSE_RADIUS = 220;
+  const NODE_COUNT = 35;
+  const CONNECT_DIST = 130;
+  const MOUSE_RADIUS = 180;
 
   // ===== Floating wireframe shapes =====
   const SHAPES = [];
-  const SHAPE_COUNT = 10;
+  const SHAPE_COUNT = 4;
 
   function resize() {
     W = canvas.width = window.innerWidth;
@@ -140,7 +140,7 @@
       const mDist = Math.sqrt((n.x - mouse.x) ** 2 + (n.y - mouse.y) ** 2);
       const boost = mDist < MOUSE_RADIUS ? (1 - mDist / MOUSE_RADIUS) : 0;
 
-      ctx.fillStyle = `rgba(0, 0, 0, ${0.1 + boost * 0.2})`;
+      ctx.fillStyle = `rgba(0, 0, 0, ${0.15 + boost * 0.3})`;
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r + boost * 3, 0, Math.PI * 2);
       ctx.fill();
