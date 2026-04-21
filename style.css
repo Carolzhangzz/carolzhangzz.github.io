@@ -378,42 +378,29 @@ strong {
 }
 
 .publication-links {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.35rem;
   flex-wrap: wrap;
 }
 
-.publication-links a {
-  font-size: 0.8rem;
-  border: none;
+.publication-links a, .bibtex-toggle {
+  font-size: 0.75rem;
   color: var(--accent-color);
-  background: none;
-  padding: 0;
+  border: 1px solid rgba(160,112,96,0.3);
+  background: var(--background-color);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
   text-decoration: none;
-  transition: all 0.3s;
-  margin-right: 0.6rem;
-}
-
-.publication-links a:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
-}
-
-.bibtex-toggle {
-  font-size: 0.8rem;
-  border: none;
-  color: var(--accent-color);
-  background: none;
-  padding: 0;
   cursor: pointer;
   font-family: var(--body-font);
   transition: all 0.3s;
 }
 
-.bibtex-toggle:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
+.publication-links a:hover, .bibtex-toggle:hover {
+  border-color: var(--accent-color);
+  background: rgba(160,112,96,0.06);
+  text-decoration: none;
 }
 
 .bibtex-content {
