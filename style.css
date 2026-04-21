@@ -300,19 +300,8 @@ strong {
   gap: 1.5rem;
   align-items: flex-start;
   padding: 1.2rem 0;
-  border-bottom: 1px solid var(--border-color);
-  transition: all 0.4s;
 }
 
-.publication-item:last-child { border-bottom: none; }
-
-.publication-item:hover {
-  background: var(--bg-warm);
-  margin: 0 -1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 6px;
-}
 
 .pub-date {
   flex: 0 0 85px;
@@ -335,11 +324,6 @@ strong {
   padding: 4px;
   border: 1px solid var(--border-color);
   box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-  transition: all 0.4s;
-}
-
-.publication-item:hover .publication-image img {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .pub-info h3 {
