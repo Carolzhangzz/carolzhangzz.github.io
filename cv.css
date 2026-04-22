@@ -3,13 +3,13 @@
   --primary-color: #1a1a1a;
   --text-main: #2a2a2a;
   --text-muted: #777;
-  --accent-color: #4a6fa5;
-  --accent-hover: #3a5a8a;
-  --background-color: #fcfaf5;
-  --bg-warm: #f7f5ef;
+  --accent-color: #a07060;
+  --accent-hover: #8a5c4e;
+  --background-color: #fefefe;
+  --bg-warm: #fafafa;
   --border-color: #e8e4dc;
-  --body-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --heading-font: "EB Garamond", Garamond, "Times New Roman", serif;
+  --body-font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --heading-font: "Crimson Pro", Georgia, "Times New Roman", serif;
 }
 
 /* ========== Global Reset ========== */
