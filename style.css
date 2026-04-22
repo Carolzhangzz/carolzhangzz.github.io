@@ -510,19 +510,19 @@ strong {
 .blog-card-header { margin-bottom: 0.5rem; }
 
 .blog-card-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-family: var(--heading-font);
   color: var(--primary-color);
   margin-bottom: 0.3rem;
 }
 
 .blog-card-meta {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
 .blog-card-excerpt {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--text-main);
 }
@@ -530,7 +530,7 @@ strong {
 .blog-card-more {
   display: inline-block;
   margin-top: 0.8rem;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--accent-color);
   font-weight: 500;
 }
@@ -548,20 +548,20 @@ strong {
 }
 
 .post-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
 .post-meta {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 0.5rem;
 }
 
 .post-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-style: italic;
   color: var(--text-muted);
   line-height: 1.4;
@@ -574,21 +574,21 @@ strong {
 }
 
 .post-content h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-top: 3rem;
   margin-bottom: 1.2rem;
   border-bottom: none;
 }
 
 .post-content h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .post-content p {
   margin-bottom: 1.5rem;
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
@@ -598,7 +598,7 @@ strong {
   border-left: 3px solid var(--accent-color);
   background: var(--bg-warm);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1rem;
   border-radius: 0 4px 4px 0;
 }
 
@@ -609,12 +609,12 @@ strong {
 
 .post-content li {
   margin-bottom: 0.8rem;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
 .references-list {
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
