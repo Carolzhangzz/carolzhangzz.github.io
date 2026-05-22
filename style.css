@@ -664,7 +664,8 @@ footer p {
 
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
-  main { padding: 0 1.5rem 2rem; }
+  main { padding: 0 1rem 2rem; }
+  body { overflow-x: hidden; }
 
   .header-container {
     flex-direction: column;
@@ -683,13 +684,25 @@ footer p {
   .profile-layout {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    text-align: center;
+    gap: 1.2rem;
+    text-align: left;
   }
 
   .profile-sidebar {
     flex: none;
     width: 100%;
+    text-align: center;
+  }
+
+  .profile-content-text {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .profile-content-text p {
+    font-size: 0.82rem;
+    line-height: 1.6;
   }
 
   .photo-hover-container {
@@ -698,8 +711,34 @@ footer p {
   }
 
   .publication-item {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .pub-date {
+    flex: 0 0 60px;
+    font-size: 0.75rem;
+  }
+
+  .publication-image {
+    flex: 0 0 70px;
+  }
+
+  .pub-info h3 {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .pub-info .authors,
+  .pub-info .venue {
+    font-size: 0.78rem;
+  }
+
+  .publication-links a,
+  .publication-links button {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
   }
 
   .news-item {
@@ -707,6 +746,16 @@ footer p {
     gap: 0.2rem;
   }
 
-  .research-tags { justify-content: center; }
+  .research-tags {
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.5rem;
+    white-space: normal;
+    word-break: break-word;
+  }
   .social-links-text { text-align: center; }
 }
