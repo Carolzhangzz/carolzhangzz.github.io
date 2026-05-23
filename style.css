@@ -516,11 +516,14 @@ strong {
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: transform 0.2s ease;
+  border: 1px solid var(--border-color);
+  padding: 1.4rem 1.6rem;
+  transition: transform 0.2s ease, border-color 0.3s;
 }
 
 .blog-card:hover {
   transform: translateX(5px);
+  border-color: var(--accent-color);
   text-decoration: none;
 }
 
