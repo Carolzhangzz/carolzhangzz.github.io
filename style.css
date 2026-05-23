@@ -201,7 +201,7 @@ strong {
   font-size: 0.78rem;
   padding: 0.25rem 0.7rem;
   border: 1px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: 0;
   color: var(--text-muted);
   background: transparent;
   transition: all 0.4s;
