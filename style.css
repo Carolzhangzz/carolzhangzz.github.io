@@ -204,20 +204,24 @@ strong {
   border-radius: 0;
   color: var(--text-muted);
   background: transparent;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: color 0.2s, border-color 0.2s;
   white-space: nowrap;
   line-height: 1.4;
   text-align: center;
 }
 
-.tag:hover { color: #fff; border-color: transparent; }
+.tag:hover {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(120deg, #f6a192, #f9c56a, #a8d8a0, #7ec8d8, #a89fd8, #f6a192);
+  background-size: 300% 100%;
+  animation: tag-shimmer 2s linear infinite;
+}
 
-.tag:nth-child(1):hover { background: #c07060; }
-.tag:nth-child(2):hover { background: #6a8f7a; }
-.tag:nth-child(3):hover { background: #6a7fa8; }
-.tag:nth-child(4):hover { background: #8a70a0; }
-.tag:nth-child(5):hover { background: #a08050; }
-.tag:nth-child(6):hover { background: #5a8a88; }
+@keyframes tag-shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
 
 /* ========== Social Links ========== */
 .social-links-text {
