@@ -501,6 +501,41 @@ strong {
   color: var(--accent-color);
 }
 
+/* ========== Service Section ========== */
+#service h2 {
+  margin-top: 2rem;
+}
+
+.service-group {
+  margin-bottom: 1.2rem;
+}
+
+.service-group h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.service-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-group ul li {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--border-color);
+  line-height: 1.5;
+}
+
+.service-group ul li:last-child {
+  border-bottom: none;
+}
+
 /* ========== Blog List Styles ========== */
 .blog-list {
   max-width: 800px;
