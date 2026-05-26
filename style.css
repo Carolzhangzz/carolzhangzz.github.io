@@ -755,27 +755,34 @@ footer p {
   }
 
   .publication-item {
-    flex-direction: row;
-    gap: 0.8rem;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.8rem;
   }
 
   .pub-date {
-    flex: 0 0 55px;
-    font-size: 0.75rem;
+    flex: 0 0 auto;
+    font-size: 0.78rem;
+    order: 1;
   }
 
   .publication-image {
-    flex: 0 0 65px;
+    flex: 0 0 80px;
+    order: 2;
+  }
+
+  .pub-info {
+    flex: 0 0 100%;
+    order: 3;
   }
 
   .pub-info h3 {
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.45;
   }
 
   .pub-info .authors,
   .pub-info .venue {
-    font-size: 0.78rem;
+    font-size: 0.84rem;
   }
 
   .publication-links a,
