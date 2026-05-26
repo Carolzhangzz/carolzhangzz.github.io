@@ -34,15 +34,17 @@
     </header>
 
     <main>
-        <section id="about">
-            <div class="profile-layout">
-                <div class="profile-sidebar">
-                    <img src="./images/carol.png" alt="Carol Zhang" class="profile-photo">
-                    <p class="profile-status">Incoming CS Ph.D. @ FSU</p>
-                </div>
+        <div class="page-layout">
 
-                <div class="profile-content-text">
-                    <p>Hi, I’m Carol Zhang. I’m an incoming CS Ph.D. student at
+            <!-- MAIN: bio (with float photo) + publications -->
+            <div class="mid-col">
+                <section id="about">
+                    <div class="profile-float">
+                        <img src="./images/carol.png" alt="Carol Zhang" class="profile-photo">
+                        <p class="profile-status">Incoming Ph.D. @ FSU</p>
+                    </div>
+                    <div class="about-text">
+                    <p>Hi, I’m Carol Zhang. I’m an incoming Ph.D. student at
                         <a href="https://www.fsu.edu/">Florida State University</a>,
                         where I will be advised by
                         <a href="https://wangyifang.top/">Prof. Yifang Wang</a>.
@@ -50,14 +52,12 @@
                         University of California, San Diego (UCSD), and my B.S. from
                         China Jiliang University (CJLU) & Auckland University of Technology (AUT).
                     </p>
-
                     <p>
                         My main research interests focus on <strong>AI for Social Good</strong> and
                         <strong>AI Agents</strong>.
                         I have designed and developed <strong>conversational agents</strong> leveraging
                         NLP techniques for behavior analysis and intervention.
                     </p>
-
                     <p>
                         Previously, I have worked with
                         <a href="https://spdow.ucsd.edu/">Prof. Steven Dow</a> at
@@ -70,12 +70,10 @@
                         <a href="./PDF/GameSustainability_CHI_25__Clean_Version_.pdf">first-authored paper</a>
                         at CHI’25.
                     </p>
-
                     <p>
                         I am happy to collaborate or just chat about research, my email is
                         <a href="mailto:qiz065@ucsd.edu">qiz065@ucsd.edu</a>.
                     </p>
-
                     <div class="research-tags">
                         <span class="tag">AI for Social Good</span>
                         <span class="tag">Human-AI Interaction</span>
@@ -84,7 +82,6 @@
                         <span class="tag">World Model</span>
                         <span class="tag">Serious Game Design</span>
                     </div>
-
                     <div class="social-links-icons">
                         <a href="https://twitter.com/Carol_Zhang1027" title="X"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="./cv.html" title="CV"><i class="fas fa-file-alt"></i></a>
@@ -93,11 +90,8 @@
                         <a href="https://www.linkedin.com/in/qinshiz/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="mailto:qiz065@ucsd.edu" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
-
-
-                </div>
-            </div>
-        </section>
+                    </div>
+                </section>
 
         <section id="publications">
             <h2>Papers</h2>
@@ -311,14 +305,16 @@
                 </div>
             </div>
         </section>
+            </div><!-- end mid-col -->
 
+            <!-- RIGHT: news -->
+            <aside class="right-col">
         <section id="news">
-            <h2>News</h2>
             <div class="news-container">
                 <div class="news-item highlight">
                     <span class="date">2026.04</span>
                     <div class="news-content">
-                        Happy to join <a href="https://www.fsu.edu/">Florida State University</a> as a CS Ph.D. student starting June 2026, advised by <a href="https://wangyifang.top/">Prof. Yifang Wang</a>! <span class="news-badge">new</span>
+                        Happy to join <a href="https://www.fsu.edu/">Florida State University</a> as a Ph.D. student starting June 2026, advised by <a href="https://wangyifang.top/">Prof. Yifang Wang</a>! <span class="news-badge">new</span>
                     </div>
                 </div>
                 <div class="news-item">
@@ -392,7 +388,9 @@
             </div>
             <button id="show-more-btn" class="show-more">+ show more</button>
         </section>
+            </aside><!-- end right-col -->
 
+        </div><!-- end page-layout -->
     </main>
     <footer>
         <p>Qinshi (Carol) Zhang &middot; 2026</p>
