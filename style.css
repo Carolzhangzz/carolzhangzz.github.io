@@ -61,15 +61,6 @@ main {
   margin-top: 2rem;
 }
 
-/* Photo floated inside bio text */
-.profile-float {
-  float: left;
-  width: 130px;
-  text-align: center;
-  margin: 0.2rem 1.8rem 0.5rem 0;
-}
-
-
 /* BFC container keeps text+tags right of the float */
 .about-text {
   overflow: hidden;
@@ -82,8 +73,16 @@ main {
   clear: both;
 }
 
+.profile-float {
+  float: left;
+  width: 130px;
+  text-align: center;
+  margin: 0.2rem 1.8rem 0.5rem 0;
+}
+
 .right-col {
 }
+
 
 /* ========== Header ========== */
 .site-header {
@@ -137,6 +136,7 @@ main {
   margin: 0 auto 0.5rem;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
   border: none;
   margin-bottom: 0.6rem;
 }
@@ -737,6 +737,7 @@ footer p {
 
   .page-layout {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .profile-float {
