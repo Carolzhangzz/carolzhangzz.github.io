@@ -217,16 +217,8 @@ strong {
 }
 
 .tag:hover {
-  color: #fff;
-  border-color: transparent;
-  background: linear-gradient(120deg, #f6a192, #f9c56a, #a8d8a0, #7ec8d8, #a89fd8, #f6a192);
-  background-size: 300% 100%;
-  animation: tag-shimmer 2s linear infinite;
-}
-
-@keyframes tag-shimmer {
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* ========== Social Links ========== */
